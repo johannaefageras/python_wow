@@ -1,0 +1,677 @@
+{
+  "zone": {
+    "id": "elwynn_forest",
+    "name": "Elwynn Forest",
+    "description": "A tranquil woodland realm dotted with farms and small communities, Elwynn Forest serves as the heartland of the Kingdom of Stormwind. But beneath its peaceful canopy lurk dangers — bandits, gnolls, and fouler things threaten the good people who call this forest home.",
+    "level_range": { "min": 1, "max": 10 },
+    "ambient_enemies": ["young_wolf", "timber_wolf", "young_boar", "forest_boar", "forest_spider"],
+    "connections": [
+      { "zone_id": "stormwind_city", "location": "gates_of_stormwind", "direction": "north" },
+      { "zone_id": "westfall", "location": "westfall_border", "direction": "west" }
+    ],
+    "locations": [
+      {
+        "id": "northshire_abbey",
+        "name": "Northshire Abbey",
+        "description": "A serene monastery nestled in a quiet valley. Paladins and priests train here, and it serves as a haven for new adventurers taking their first steps into the wider world.",
+        "type": "town",
+        "is_starting_location": true,
+        "is_safe_zone": true,
+        "npcs": [],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "northshire_vineyards",
+            "direction": "east",
+            "description": "A path winds through the vineyards."
+          },
+          {
+            "location_id": "elwynn_crossroads",
+            "direction": "south",
+            "description": "The road leads south toward Goldshire."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Abbey Entrance",
+            "description": "The grand wooden doors of the abbey stand open, welcoming all who seek refuge."
+          },
+          { "name": "Training Dummies", "description": "Straw dummies set up for combat practice." }
+        ]
+      },
+      {
+        "id": "northshire_vineyards",
+        "name": "Northshire Vineyards",
+        "description": "Rows of grapevines stretch across the hillside. Workers tend the vines, though they cast nervous glances toward the forest edge.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["young_wolf", "young_boar"],
+        "encounter_chance": 0.3,
+        "connections": [
+          {
+            "location_id": "northshire_abbey",
+            "direction": "west",
+            "description": "The abbey's spires are visible over the hills."
+          },
+          {
+            "location_id": "elwynn_crossroads",
+            "direction": "south",
+            "description": "A dirt road heads south."
+          }
+        ]
+      },
+      {
+        "id": "elwynn_crossroads",
+        "name": "Elwynn Crossroads",
+        "description": "A well-traveled intersection where the roads from Northshire, Goldshire, and the western farms converge. A lone guard keeps watch.",
+        "type": "crossroads",
+        "is_safe_zone": true,
+        "npcs": ["guard_thomas"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "northshire_abbey",
+            "direction": "north",
+            "description": "The road climbs toward Northshire Abbey."
+          },
+          {
+            "location_id": "goldshire",
+            "direction": "south",
+            "description": "The main road continues to Goldshire."
+          },
+          {
+            "location_id": "forest_edge_west",
+            "direction": "west",
+            "description": "A smaller path leads into the western woods."
+          },
+          {
+            "location_id": "forest_edge_east",
+            "direction": "east",
+            "description": "A trail winds toward the eastern forest."
+          }
+        ]
+      },
+      {
+        "id": "goldshire",
+        "name": "Goldshire",
+        "description": "A bustling village centered around the Lion's Pride Inn. Merchants hawk their wares, trainers offer instruction, and adventurers gather to share tales and seek work. The heart of Elwynn Forest.",
+        "type": "town",
+        "is_safe_zone": true,
+        "npcs": [
+          "marshal_dughan",
+          "william_pestle",
+          "innkeeper_farley",
+          "smith_argus",
+          "eldrin_the_wise",
+          "brother_wilhelm",
+          "sergeant_brashclaw",
+          "shadowblade_mirena",
+          "huntsman_gregor",
+          "tomas_the_trapper",
+          "remy_two_times",
+          "sara_timberlain",
+          "wanted_poster_hogger"
+        ],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "elwynn_crossroads",
+            "direction": "north",
+            "description": "The north road leads to the crossroads."
+          },
+          {
+            "location_id": "crystal_lake",
+            "direction": "east",
+            "description": "A peaceful path leads to Crystal Lake."
+          },
+          {
+            "location_id": "stonefield_farm",
+            "direction": "southwest",
+            "description": "A farm road leads to the Stonefield property."
+          },
+          {
+            "location_id": "maclure_vineyards",
+            "direction": "south",
+            "description": "The road continues south to the Maclure Vineyards."
+          },
+          {
+            "location_id": "fargodeep_mine_entrance",
+            "direction": "west",
+            "description": "A worn path leads toward the mines."
+          }
+        ],
+        "services": ["inn", "vendors", "trainers", "repair"],
+        "points_of_interest": [
+          {
+            "name": "Lion's Pride Inn",
+            "description": "A warm, welcoming tavern. The smell of roasting meat and fresh bread wafts from within."
+          },
+          {
+            "name": "Blacksmith",
+            "description": "The ring of hammer on anvil echoes from the forge."
+          },
+          {
+            "name": "Town Square",
+            "description": "A small plaza where locals gather to trade gossip and goods."
+          }
+        ]
+      },
+      {
+        "id": "crystal_lake",
+        "name": "Crystal Lake",
+        "description": "A serene lake with crystal-clear waters. Fishermen cast their lines from the shore, though lately murlocs have made the waterfront dangerous.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["murloc_forager", "murloc_warrior"],
+        "encounter_chance": 0.5,
+        "connections": [
+          {
+            "location_id": "goldshire",
+            "direction": "west",
+            "description": "The path returns to Goldshire."
+          },
+          {
+            "location_id": "crystal_lake_shore",
+            "direction": "east",
+            "description": "The shore continues along the water's edge."
+          },
+          {
+            "location_id": "eastvale_logging_camp",
+            "direction": "northeast",
+            "description": "A lumber trail leads to the logging camp."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Fishing Dock",
+            "description": "A wooden dock extends into the lake. Abandoned fishing gear lies scattered about."
+          },
+          {
+            "name": "Murloc Hovels",
+            "description": "Crude huts made of reeds and mud dot the shoreline."
+          }
+        ]
+      },
+      {
+        "id": "crystal_lake_shore",
+        "name": "Crystal Lake Shore",
+        "description": "The eastern shore of Crystal Lake. Murloc presence is stronger here, and their gurgling cries echo across the water.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["murloc_forager", "murloc_warrior", "murloc_oracle"],
+        "encounter_chance": 0.6,
+        "connections": [
+          {
+            "location_id": "crystal_lake",
+            "direction": "west",
+            "description": "Follow the shore back west."
+          }
+        ]
+      },
+      {
+        "id": "eastvale_logging_camp",
+        "name": "Eastvale Logging Camp",
+        "description": "A rugged camp where loggers harvest timber from the forest. The workers are hardy folk, but recent murloc and gnoll attacks have put everyone on edge.",
+        "type": "camp",
+        "is_safe_zone": true,
+        "npcs": ["deputy_feldon", "quartermaster_lewis"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "crystal_lake",
+            "direction": "southwest",
+            "description": "A trail leads back toward the lake."
+          },
+          {
+            "location_id": "eastern_woods",
+            "direction": "east",
+            "description": "The forest grows dense to the east."
+          }
+        ],
+        "services": ["vendors", "repair"],
+        "points_of_interest": [
+          {
+            "name": "Lumber Mill",
+            "description": "A large sawmill where logs are processed into timber."
+          },
+          { "name": "Worker Tents", "description": "Canvas tents where the loggers sleep." }
+        ]
+      },
+      {
+        "id": "eastern_woods",
+        "name": "Eastern Elwynn Woods",
+        "description": "Dense forest east of the logging camp. Spiders have spun their webs between the ancient trees, and wolves prowl in the shadows.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["timber_wolf", "prowler", "forest_spider", "giant_spider"],
+        "encounter_chance": 0.5,
+        "connections": [
+          {
+            "location_id": "eastvale_logging_camp",
+            "direction": "west",
+            "description": "The logging camp lies to the west."
+          },
+          {
+            "location_id": "mother_fangs_hollow",
+            "direction": "northeast",
+            "description": "A dark hollow lies deeper in the woods."
+          }
+        ]
+      },
+      {
+        "id": "mother_fangs_hollow",
+        "name": "Mother Fang's Hollow",
+        "description": "A shadowy grove dominated by an enormous dead tree draped in thick webs. This is the lair of Mother Fang, a giant spider queen.",
+        "type": "elite_area",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["forest_spider", "giant_spider"],
+        "boss": "mother_fang",
+        "encounter_chance": 0.7,
+        "connections": [
+          {
+            "location_id": "eastern_woods",
+            "direction": "southwest",
+            "description": "Retreat through the webbed trees."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "The Dead Tree",
+            "description": "A massive hollow tree covered in webbing. Something large moves within."
+          },
+          {
+            "name": "Cocoons",
+            "description": "Silk cocoons hang from branches. Some are disturbingly human-sized."
+          }
+        ]
+      },
+      {
+        "id": "stonefield_farm",
+        "name": "Stonefield Farm",
+        "description": "A well-kept farm growing pumpkins and grain. The Stonefield family has worked this land for generations.",
+        "type": "farm",
+        "is_safe_zone": true,
+        "npcs": ["gramma_stonefield"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "goldshire",
+            "direction": "northeast",
+            "description": "The road leads back to Goldshire."
+          },
+          {
+            "location_id": "pumpkin_fields",
+            "direction": "south",
+            "description": "The pumpkin fields stretch to the south."
+          },
+          {
+            "location_id": "maclure_vineyards",
+            "direction": "east",
+            "description": "A path leads to the Maclure property."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Farmhouse",
+            "description": "A cozy stone farmhouse with smoke rising from the chimney."
+          },
+          { "name": "Barn", "description": "A large red barn filled with farming equipment." }
+        ]
+      },
+      {
+        "id": "pumpkin_fields",
+        "name": "Pumpkin Fields",
+        "description": "Vast fields of pumpkins stretching toward the forest edge. Billy Stonefield watches over them, keeping an eye out for pests — both animal and gnoll.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": ["billy_stonefield"],
+        "enemies": ["young_boar", "forest_boar"],
+        "encounter_chance": 0.25,
+        "connections": [
+          {
+            "location_id": "stonefield_farm",
+            "direction": "north",
+            "description": "The farmhouse is visible to the north."
+          },
+          {
+            "location_id": "gnoll_territory",
+            "direction": "west",
+            "description": "The forest grows wild to the west. Gnoll tracks are visible."
+          }
+        ]
+      },
+      {
+        "id": "maclure_vineyards",
+        "name": "Maclure Vineyards",
+        "description": "Rolling hills covered in grapevines. The Maclure family produces fine wine here, though the feud with the Stonefields has soured relations.",
+        "type": "farm",
+        "is_safe_zone": true,
+        "npcs": ["maybell_maclure"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "goldshire",
+            "direction": "north",
+            "description": "The road leads to Goldshire."
+          },
+          {
+            "location_id": "stonefield_farm",
+            "direction": "west",
+            "description": "A path leads toward the Stonefield farm."
+          },
+          {
+            "location_id": "forest_edge_south",
+            "direction": "south",
+            "description": "The vineyards give way to wild forest."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Vineyard House",
+            "description": "An elegant farmhouse overlooking the vines."
+          },
+          { "name": "Wine Cellar", "description": "A stone cellar where wine barrels age." }
+        ]
+      },
+      {
+        "id": "forest_edge_west",
+        "name": "Western Forest Edge",
+        "description": "The western fringe of Elwynn Forest. Defias bandits have been spotted along these roads, preying on travelers.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_thug", "defias_cutpurse", "timber_wolf"],
+        "encounter_chance": 0.45,
+        "connections": [
+          {
+            "location_id": "elwynn_crossroads",
+            "direction": "east",
+            "description": "The crossroads lies to the east."
+          },
+          {
+            "location_id": "defias_camp",
+            "direction": "west",
+            "description": "Smoke rises from deeper in the woods."
+          },
+          {
+            "location_id": "gnoll_territory",
+            "direction": "southwest",
+            "description": "Gnoll howls echo from the southwest."
+          }
+        ]
+      },
+      {
+        "id": "defias_camp",
+        "name": "Defias Hideout",
+        "description": "A hidden camp where Defias bandits plan their raids. Tents and crude fortifications surround a central fire pit.",
+        "type": "hostile_camp",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_thug", "defias_bandit", "defias_cutpurse"],
+        "encounter_chance": 0.7,
+        "connections": [
+          {
+            "location_id": "forest_edge_west",
+            "direction": "east",
+            "description": "Slip back into the forest."
+          }
+        ],
+        "points_of_interest": [
+          { "name": "Defias Tents", "description": "Ragged tents housing the bandits." },
+          {
+            "name": "Stolen Goods",
+            "description": "Crates of stolen merchandise piled near the fire."
+          }
+        ]
+      },
+      {
+        "id": "gnoll_territory",
+        "name": "Gnoll Territory",
+        "description": "The southwestern reaches of Elwynn, claimed by the Riverpaw gnoll tribe. Their camps dot the hillsides, and patrols are frequent.",
+        "type": "hostile_territory",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["gnoll_scout", "gnoll_brute", "gnoll_mystic"],
+        "encounter_chance": 0.6,
+        "connections": [
+          {
+            "location_id": "forest_edge_west",
+            "direction": "northeast",
+            "description": "A trail leads back toward civilization."
+          },
+          {
+            "location_id": "pumpkin_fields",
+            "direction": "east",
+            "description": "The Stonefield farm lies to the east."
+          },
+          {
+            "location_id": "hoggers_hill",
+            "direction": "south",
+            "description": "A hill looms to the south. The gnolls grow more numerous."
+          }
+        ]
+      },
+      {
+        "id": "hoggers_hill",
+        "name": "Hogger's Hill",
+        "description": "A rocky hill where the infamous gnoll warlord Hogger has established his stronghold. Gnoll warriors patrol constantly, and the sounds of their savage rituals echo through the night.",
+        "type": "elite_area",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["gnoll_scout", "gnoll_brute", "gnoll_mystic"],
+        "boss": "hogger",
+        "encounter_chance": 0.75,
+        "connections": [
+          {
+            "location_id": "gnoll_territory",
+            "direction": "north",
+            "description": "Retreat down the hill."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Hogger's Camp",
+            "description": "A fortified gnoll camp at the hilltop. Bones and trophies decorate crude wooden posts."
+          },
+          {
+            "name": "Gnoll Firepit",
+            "description": "A large fire pit where gnolls gather. Something unpleasant is roasting."
+          }
+        ]
+      },
+      {
+        "id": "fargodeep_mine_entrance",
+        "name": "Fargodeep Mine Entrance",
+        "description": "The entrance to the Fargodeep Mine. Mining carts and equipment sit abandoned, and kobold chatter echoes from within.",
+        "type": "dungeon_entrance",
+        "is_safe_zone": true,
+        "npcs": ["supervisor_raelen"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "goldshire",
+            "direction": "east",
+            "description": "The road returns to Goldshire."
+          },
+          {
+            "location_id": "fargodeep_mine_upper",
+            "direction": "down",
+            "description": "Descend into the mine."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Mine Office",
+            "description": "A small shack where the supervisor tracks shipments."
+          },
+          {
+            "name": "Abandoned Carts",
+            "description": "Mining carts overturned and covered in dust."
+          }
+        ]
+      },
+      {
+        "id": "fargodeep_mine_upper",
+        "name": "Fargodeep Mine - Upper Tunnels",
+        "description": "Narrow mine tunnels shored up with wooden beams. Kobolds scurry in the darkness, their candles flickering. 'You no take candle!'",
+        "type": "dungeon",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["kobold_tunneler", "kobold_miner"],
+        "encounter_chance": 0.55,
+        "connections": [
+          {
+            "location_id": "fargodeep_mine_entrance",
+            "direction": "up",
+            "description": "Climb back to the surface."
+          },
+          {
+            "location_id": "fargodeep_mine_lower",
+            "direction": "down",
+            "description": "A passage leads deeper into the mine."
+          }
+        ],
+        "environment": {
+          "lighting": "dim",
+          "hazards": ["unstable_ground"]
+        }
+      },
+      {
+        "id": "fargodeep_mine_lower",
+        "name": "Fargodeep Mine - Lower Tunnels",
+        "description": "The deeper reaches of the mine. Kobold geomancers have claimed this area, and their earth magic has reshaped the tunnels. Veins of gold glitter in the walls.",
+        "type": "dungeon",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["kobold_miner", "kobold_geomancer"],
+        "encounter_chance": 0.6,
+        "connections": [
+          {
+            "location_id": "fargodeep_mine_upper",
+            "direction": "up",
+            "description": "Return to the upper tunnels."
+          },
+          {
+            "location_id": "goldtooths_lair",
+            "direction": "down",
+            "description": "A fortified passage leads to the deepest chamber."
+          }
+        ],
+        "environment": {
+          "lighting": "dark",
+          "hazards": ["unstable_ground", "falling_rocks"]
+        }
+      },
+      {
+        "id": "goldtooths_lair",
+        "name": "Goldtooth's Lair",
+        "description": "The deepest chamber of the mine, claimed by the kobold leader Goldtooth. Piles of ore and stolen goods surround his crude throne.",
+        "type": "boss_room",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["kobold_tunneler", "kobold_geomancer"],
+        "boss": "goldtooth",
+        "encounter_chance": 0.8,
+        "connections": [
+          {
+            "location_id": "fargodeep_mine_lower",
+            "direction": "up",
+            "description": "Flee back up the tunnel."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Goldtooth's Throne",
+            "description": "A pile of ore and crates fashioned into a crude seat."
+          },
+          { "name": "Treasure Pile", "description": "Stolen goods, ore, and glittering gold dust." }
+        ],
+        "environment": {
+          "lighting": "dim",
+          "hazards": []
+        }
+      },
+      {
+        "id": "forest_edge_south",
+        "name": "Southern Forest",
+        "description": "The wild southern reaches of Elwynn. The canopy grows thick here, and dangerous creatures lurk in the undergrowth.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["timber_wolf", "prowler", "forest_spider", "giant_spider"],
+        "encounter_chance": 0.5,
+        "connections": [
+          {
+            "location_id": "maclure_vineyards",
+            "direction": "north",
+            "description": "Return to the vineyards."
+          },
+          {
+            "location_id": "westfall_border",
+            "direction": "west",
+            "description": "The forest thins toward Westfall."
+          }
+        ]
+      },
+      {
+        "id": "westfall_border",
+        "name": "Westfall Border",
+        "description": "The western edge of Elwynn Forest. Beyond lies Westfall — a land of golden fields, but also poverty and danger. The road ahead looks dusty and dry.",
+        "type": "zone_border",
+        "is_safe_zone": true,
+        "npcs": [],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "forest_edge_south",
+            "direction": "east",
+            "description": "Return to the forest."
+          },
+          {
+            "zone_id": "westfall",
+            "direction": "west",
+            "description": "Continue into Westfall. (Not yet available)"
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Border Sign",
+            "description": "A weathered sign reads: 'Now leaving Elwynn Forest. Westfall ahead. Travel at your own risk.'"
+          }
+        ]
+      },
+      {
+        "id": "gates_of_stormwind",
+        "name": "Gates of Stormwind",
+        "description": "The massive stone gates leading to Stormwind City rise before you. Guards in gleaming armor watch over all who enter.",
+        "type": "zone_border",
+        "is_safe_zone": true,
+        "npcs": [],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "northshire_abbey",
+            "direction": "south",
+            "description": "The road leads south into Elwynn."
+          },
+          {
+            "zone_id": "stormwind_city",
+            "direction": "north",
+            "description": "Enter Stormwind City. (Not yet available)"
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Valley of Heroes",
+            "description": "Statues of great heroes line the bridge into the city."
+          }
+        ]
+      }
+    ]
+  }
+}

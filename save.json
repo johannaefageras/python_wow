@@ -1,0 +1,55 @@
+{
+  "player": {
+    "name": "Robstah",
+    "race_id": "night_elf",
+    "class_id": "rogue",
+    "level": 1,
+    "experience": 25,
+    "gold": 0,
+    "location_id": "elwynn_crossroads",
+    "zone_id": "elwynn_forest",
+    "health": 115,
+    "max_health": 120,
+    "resource": 80,
+    "max_resource": 100,
+    "stats": {
+      "strength": 6,
+      "agility": 15,
+      "intellect": 4,
+      "stamina": 8,
+      "armor": 6,
+      "health": 120,
+      "resource_max": 100
+    },
+    "modifiers": {
+      "dodge_chance": 0.02
+    },
+    "inventory": {
+      "rusty_dagger": 1,
+      "threadbare_shirt": 1,
+      "ragged_pants": 1,
+      "worn_leather_boots": 1,
+      "boar_tusk": 1,
+      "roasted_boar_meat": 1
+    },
+    "equipment": {
+      "weapon": "rusty_dagger",
+      "chest": "threadbare_shirt",
+      "legs": "ragged_pants",
+      "feet": "worn_leather_boots"
+    },
+    "abilities": [
+      "basic_attack",
+      "sinister_strike"
+    ],
+    "ability_cooldowns": {
+      "sinister_strike": 0
+    },
+    "active_quests": {},
+    "completed_quests": []
+  },
+  "content_root": "data",
+  "vendor_stock": {},
+  "world_flags": {},
+  "defeated_bosses": []
+}

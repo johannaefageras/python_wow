@@ -1,0 +1,916 @@
+{
+  "abilities": [
+    {
+      "id": "heroic_strike",
+      "name": "Heroic Strike",
+      "description": "A powerful melee attack that deals bonus damage.",
+      "class": "warrior",
+      "level_required": 1,
+      "resource_type": "rage",
+      "resource_cost": 15,
+      "cooldown": 0,
+      "damage": {
+        "base": 12,
+        "scaling_stat": "strength",
+        "scaling_factor": 0.5
+      },
+      "effects": []
+    },
+    {
+      "id": "shield_block",
+      "name": "Shield Block",
+      "description": "Raise your shield, reducing incoming damage by 50% for 2 turns.",
+      "class": "warrior",
+      "level_required": 2,
+      "resource_type": "rage",
+      "resource_cost": 20,
+      "cooldown": 4,
+      "damage": null,
+      "effects": [
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "damage_reduction",
+          "value": 0.5,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "id": "rend",
+      "name": "Rend",
+      "description": "Wound the target, causing them to bleed for damage over time.",
+      "class": "warrior",
+      "level_required": 3,
+      "resource_type": "rage",
+      "resource_cost": 10,
+      "cooldown": 0,
+      "damage": {
+        "base": 5,
+        "scaling_stat": "strength",
+        "scaling_factor": 0.2
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "bleed",
+          "value": 4,
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "id": "execute",
+      "name": "Execute",
+      "description": "Attempt to finish off a wounded foe. Can only be used on enemies below 20% health. Deals massive damage.",
+      "class": "warrior",
+      "level_required": 5,
+      "resource_type": "rage",
+      "resource_cost": 25,
+      "cooldown": 0,
+      "damage": {
+        "base": 40,
+        "scaling_stat": "strength",
+        "scaling_factor": 1.0
+      },
+      "effects": [],
+      "conditions": {
+        "target_health_below": 0.2
+      }
+    },
+    {
+      "id": "battle_shout",
+      "name": "Battle Shout",
+      "description": "Let loose a mighty shout, increasing your damage by 10% for 5 turns.",
+      "class": "warrior",
+      "level_required": 4,
+      "resource_type": "rage",
+      "resource_cost": 10,
+      "cooldown": 8,
+      "damage": null,
+      "effects": [
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "damage_bonus",
+          "value": 0.1,
+          "duration": 5
+        }
+      ]
+    },
+    {
+      "id": "mortal_strike",
+      "name": "Mortal Strike",
+      "description": "A vicious strike that deals heavy damage and reduces enemy healing by 50% for 3 turns.",
+      "class": "warrior",
+      "level_required": 8,
+      "resource_type": "rage",
+      "resource_cost": 30,
+      "cooldown": 5,
+      "damage": {
+        "base": 25,
+        "scaling_stat": "strength",
+        "scaling_factor": 0.8
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "healing_reduction",
+          "value": 0.5,
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "id": "cleave",
+      "name": "Cleave",
+      "description": "Swing in a wide arc, striking all nearby enemies.",
+      "class": "warrior",
+      "level_required": 10,
+      "resource_type": "rage",
+      "resource_cost": 25,
+      "cooldown": 3,
+      "damage": {
+        "base": 18,
+        "scaling_stat": "strength",
+        "scaling_factor": 0.55,
+        "hits_all_enemies": true
+      },
+      "effects": []
+    },
+    {
+      "id": "last_stand",
+      "name": "Last Stand",
+      "description": "A desperate surge of vitality that grants temporary protection and restores health.",
+      "class": "warrior",
+      "level_required": 14,
+      "resource_type": "rage",
+      "resource_cost": 0,
+      "cooldown": 12,
+      "damage": null,
+      "effects": [
+        {
+          "type": "heal",
+          "target": "self",
+          "value": 80,
+          "scaling_stat": "stamina",
+          "scaling_factor": 0.5
+        },
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "damage_reduction",
+          "value": 0.3,
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "id": "fireball",
+      "name": "Fireball",
+      "description": "Hurl a ball of fire at the enemy, dealing fire damage.",
+      "class": "mage",
+      "level_required": 1,
+      "resource_type": "mana",
+      "resource_cost": 15,
+      "cooldown": 0,
+      "damage": {
+        "base": 18,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.6
+      },
+      "effects": []
+    },
+    {
+      "id": "frost_nova",
+      "name": "Frost Nova",
+      "description": "Blast the enemy with freezing cold, dealing frost damage and stunning them for 1 turn.",
+      "class": "mage",
+      "level_required": 3,
+      "resource_type": "mana",
+      "resource_cost": 25,
+      "cooldown": 5,
+      "damage": {
+        "base": 10,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.3
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "stun",
+          "value": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "arcane_intellect",
+      "name": "Arcane Intellect",
+      "description": "Sharpen your mind, increasing your intellect by 10% for the rest of combat.",
+      "class": "mage",
+      "level_required": 2,
+      "resource_type": "mana",
+      "resource_cost": 20,
+      "cooldown": 0,
+      "damage": null,
+      "effects": [
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "intellect",
+          "value": 0.1,
+          "duration": 99
+        }
+      ]
+    },
+    {
+      "id": "arcane_missiles",
+      "name": "Arcane Missiles",
+      "description": "Launch a barrage of arcane missiles, striking the enemy multiple times.",
+      "class": "mage",
+      "level_required": 5,
+      "resource_type": "mana",
+      "resource_cost": 30,
+      "cooldown": 3,
+      "damage": {
+        "base": 8,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.25,
+        "hits": 3
+      },
+      "effects": []
+    },
+    {
+      "id": "fire_blast",
+      "name": "Fire Blast",
+      "description": "An instant blast of flame. Low damage but no cooldown.",
+      "class": "mage",
+      "level_required": 4,
+      "resource_type": "mana",
+      "resource_cost": 12,
+      "cooldown": 0,
+      "damage": {
+        "base": 12,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.4
+      },
+      "effects": []
+    },
+    {
+      "id": "pyroblast",
+      "name": "Pyroblast",
+      "description": "Conjure an immense ball of fire that deals devastating damage.",
+      "class": "mage",
+      "level_required": 10,
+      "resource_type": "mana",
+      "resource_cost": 50,
+      "cooldown": 6,
+      "damage": {
+        "base": 50,
+        "scaling_stat": "intellect",
+        "scaling_factor": 1.2
+      },
+      "effects": []
+    },
+    {
+      "id": "blizzard",
+      "name": "Blizzard",
+      "description": "Call down a storm of ice that batters all foes and slows their attacks.",
+      "class": "mage",
+      "level_required": 12,
+      "resource_type": "mana",
+      "resource_cost": 45,
+      "cooldown": 4,
+      "damage": {
+        "base": 14,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.35,
+        "hits_all_enemies": true
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "damage_reduction",
+          "value": 0.15,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "id": "evocation",
+      "name": "Evocation",
+      "description": "Channel arcane energy to rapidly restore mana.",
+      "class": "mage",
+      "level_required": 14,
+      "resource_type": "mana",
+      "resource_cost": 0,
+      "cooldown": 6,
+      "damage": null,
+      "effects": [
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "mana",
+          "value": 60,
+          "scaling_stat": "intellect",
+          "scaling_factor": 0.6
+        }
+      ]
+    },
+    {
+      "id": "sinister_strike",
+      "name": "Sinister Strike",
+      "description": "A quick strike that generates combo points.",
+      "class": "rogue",
+      "level_required": 1,
+      "resource_type": "energy",
+      "resource_cost": 20,
+      "cooldown": 0,
+      "damage": {
+        "base": 10,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.4
+      },
+      "effects": [
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "combo_points",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "eviscerate",
+      "name": "Eviscerate",
+      "description": "Finish off the enemy with a devastating attack. Damage increases per combo point.",
+      "class": "rogue",
+      "level_required": 2,
+      "resource_type": "energy",
+      "resource_cost": 25,
+      "cooldown": 0,
+      "damage": {
+        "base": 8,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.3,
+        "per_combo_point": 10
+      },
+      "effects": [
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "combo_points",
+          "value": -99
+        }
+      ]
+    },
+    {
+      "id": "backstab",
+      "name": "Backstab",
+      "description": "A powerful strike from behind. Can only be used on stunned targets. Generates 2 combo points.",
+      "class": "rogue",
+      "level_required": 4,
+      "resource_type": "energy",
+      "resource_cost": 30,
+      "cooldown": 0,
+      "damage": {
+        "base": 25,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.7
+      },
+      "effects": [
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "combo_points",
+          "value": 2
+        }
+      ],
+      "conditions": {
+        "target_stunned": true
+      }
+    },
+    {
+      "id": "cheap_shot",
+      "name": "Cheap Shot",
+      "description": "Stun the target for 2 turns. Generates 2 combo points.",
+      "class": "rogue",
+      "level_required": 3,
+      "resource_type": "energy",
+      "resource_cost": 40,
+      "cooldown": 8,
+      "damage": null,
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "stun",
+          "value": 1,
+          "duration": 2
+        },
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "combo_points",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "evasion",
+      "name": "Evasion",
+      "description": "Enter a defensive stance, increasing dodge chance by 50% for 3 turns.",
+      "class": "rogue",
+      "level_required": 6,
+      "resource_type": "energy",
+      "resource_cost": 0,
+      "cooldown": 10,
+      "damage": null,
+      "effects": [
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "dodge_chance",
+          "value": 0.5,
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "id": "rupture",
+      "name": "Rupture",
+      "description": "Cause the target to bleed heavily. Duration and damage increase per combo point.",
+      "class": "rogue",
+      "level_required": 8,
+      "resource_type": "energy",
+      "resource_cost": 25,
+      "cooldown": 0,
+      "damage": null,
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "bleed",
+          "value": 6,
+          "duration": 3,
+          "per_combo_point_duration": 1
+        },
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "combo_points",
+          "value": -99
+        }
+      ]
+    },
+    {
+      "id": "fan_of_knives",
+      "name": "Fan of Knives",
+      "description": "Hurl knives in all directions, striking every nearby enemy.",
+      "class": "rogue",
+      "level_required": 12,
+      "resource_type": "energy",
+      "resource_cost": 40,
+      "cooldown": 4,
+      "damage": {
+        "base": 14,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.45,
+        "hits_all_enemies": true
+      },
+      "effects": [
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "combo_points",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "kidney_shot",
+      "name": "Kidney Shot",
+      "description": "A brutal strike that stuns the target and consumes combo points.",
+      "class": "rogue",
+      "level_required": 16,
+      "resource_type": "energy",
+      "resource_cost": 35,
+      "cooldown": 8,
+      "damage": {
+        "base": 10,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.3
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "stun",
+          "value": 1,
+          "duration": 2
+        },
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "combo_points",
+          "value": -99
+        }
+      ]
+    },
+    {
+      "id": "smite",
+      "name": "Smite",
+      "description": "Call down holy fire upon the enemy.",
+      "class": "priest",
+      "level_required": 1,
+      "resource_type": "mana",
+      "resource_cost": 12,
+      "cooldown": 0,
+      "damage": {
+        "base": 14,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.5
+      },
+      "effects": []
+    },
+    {
+      "id": "lesser_heal",
+      "name": "Lesser Heal",
+      "description": "Restore a small amount of health.",
+      "class": "priest",
+      "level_required": 1,
+      "resource_type": "mana",
+      "resource_cost": 15,
+      "cooldown": 0,
+      "damage": null,
+      "effects": [
+        {
+          "type": "heal",
+          "target": "self",
+          "value": 20,
+          "scaling_stat": "intellect",
+          "scaling_factor": 0.4
+        }
+      ]
+    },
+    {
+      "id": "power_word_shield",
+      "name": "Power Word: Shield",
+      "description": "Surround yourself with a holy shield that absorbs damage.",
+      "class": "priest",
+      "level_required": 3,
+      "resource_type": "mana",
+      "resource_cost": 25,
+      "cooldown": 6,
+      "damage": null,
+      "effects": [
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "absorb_shield",
+          "value": 30,
+          "scaling_stat": "intellect",
+          "scaling_factor": 0.5,
+          "duration": 4
+        }
+      ]
+    },
+    {
+      "id": "shadow_word_pain",
+      "name": "Shadow Word: Pain",
+      "description": "Afflict the enemy with shadow magic, dealing damage over time.",
+      "class": "priest",
+      "level_required": 2,
+      "resource_type": "mana",
+      "resource_cost": 18,
+      "cooldown": 0,
+      "damage": {
+        "base": 5,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.2
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "shadow_dot",
+          "value": 5,
+          "duration": 4
+        }
+      ]
+    },
+    {
+      "id": "renew",
+      "name": "Renew",
+      "description": "Place a healing effect on yourself that restores health over time.",
+      "class": "priest",
+      "level_required": 4,
+      "resource_type": "mana",
+      "resource_cost": 20,
+      "cooldown": 0,
+      "damage": null,
+      "effects": [
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "heal_over_time",
+          "value": 8,
+          "scaling_stat": "intellect",
+          "scaling_factor": 0.2,
+          "duration": 4
+        }
+      ]
+    },
+    {
+      "id": "heal",
+      "name": "Heal",
+      "description": "Restore a moderate amount of health.",
+      "class": "priest",
+      "level_required": 5,
+      "resource_type": "mana",
+      "resource_cost": 30,
+      "cooldown": 0,
+      "damage": null,
+      "effects": [
+        {
+          "type": "heal",
+          "target": "self",
+          "value": 45,
+          "scaling_stat": "intellect",
+          "scaling_factor": 0.7
+        }
+      ]
+    },
+    {
+      "id": "holy_fire",
+      "name": "Holy Fire",
+      "description": "Sear the enemy with holy flames, dealing instant damage and additional damage over time.",
+      "class": "priest",
+      "level_required": 7,
+      "resource_type": "mana",
+      "resource_cost": 28,
+      "cooldown": 4,
+      "damage": {
+        "base": 20,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.5
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "holy_dot",
+          "value": 6,
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "id": "mind_blast",
+      "name": "Mind Blast",
+      "description": "Unleash a surge of psychic force to damage an enemy.",
+      "class": "priest",
+      "level_required": 10,
+      "resource_type": "mana",
+      "resource_cost": 30,
+      "cooldown": 3,
+      "damage": {
+        "base": 28,
+        "scaling_stat": "intellect",
+        "scaling_factor": 0.7
+      },
+      "effects": []
+    },
+    {
+      "id": "greater_heal",
+      "name": "Greater Heal",
+      "description": "A powerful spell that restores a large amount of health.",
+      "class": "priest",
+      "level_required": 14,
+      "resource_type": "mana",
+      "resource_cost": 45,
+      "cooldown": 0,
+      "damage": null,
+      "effects": [
+        {
+          "type": "heal",
+          "target": "self",
+          "value": 85,
+          "scaling_stat": "intellect",
+          "scaling_factor": 1.1
+        }
+      ]
+    },
+    {
+      "id": "hunter_shot",
+      "name": "Steady Shot",
+      "description": "A steady, reliable shot that deals consistent damage.",
+      "class": "hunter",
+      "level_required": 1,
+      "resource_type": "focus",
+      "resource_cost": 0,
+      "cooldown": 0,
+      "damage": {
+        "base": 12,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.45
+      },
+      "effects": [
+        {
+          "type": "resource",
+          "target": "self",
+          "stat": "focus",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "arcane_shot",
+      "name": "Arcane Shot",
+      "description": "An instant shot infused with arcane energy.",
+      "class": "hunter",
+      "level_required": 2,
+      "resource_type": "focus",
+      "resource_cost": 25,
+      "cooldown": 0,
+      "damage": {
+        "base": 18,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.55
+      },
+      "effects": []
+    },
+    {
+      "id": "serpent_sting",
+      "name": "Serpent Sting",
+      "description": "Sting the target with poison, dealing nature damage over time.",
+      "class": "hunter",
+      "level_required": 3,
+      "resource_type": "focus",
+      "resource_cost": 20,
+      "cooldown": 0,
+      "damage": {
+        "base": 5,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.15
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "poison",
+          "value": 5,
+          "duration": 4
+        }
+      ]
+    },
+    {
+      "id": "concussive_shot",
+      "name": "Concussive Shot",
+      "description": "Daze the target, reducing their damage by 20% for 2 turns.",
+      "class": "hunter",
+      "level_required": 4,
+      "resource_type": "focus",
+      "resource_cost": 15,
+      "cooldown": 5,
+      "damage": {
+        "base": 8,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.2
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "damage_reduction",
+          "value": 0.2,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "id": "aimed_shot",
+      "name": "Aimed Shot",
+      "description": "A carefully aimed shot that deals heavy damage.",
+      "class": "hunter",
+      "level_required": 6,
+      "resource_type": "focus",
+      "resource_cost": 35,
+      "cooldown": 4,
+      "damage": {
+        "base": 30,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.8
+      },
+      "effects": []
+    },
+    {
+      "id": "multi_shot",
+      "name": "Multi-Shot",
+      "description": "Fire multiple arrows at once. Useful against groups of enemies.",
+      "class": "hunter",
+      "level_required": 8,
+      "resource_type": "focus",
+      "resource_cost": 40,
+      "cooldown": 3,
+      "damage": {
+        "base": 15,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.4,
+        "hits_all_enemies": true
+      },
+      "effects": []
+    },
+    {
+      "id": "explosive_shot",
+      "name": "Explosive Shot",
+      "description": "Fire an explosive charge that blasts the target and ignites them.",
+      "class": "hunter",
+      "level_required": 12,
+      "resource_type": "focus",
+      "resource_cost": 35,
+      "cooldown": 4,
+      "damage": {
+        "base": 18,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.5
+      },
+      "effects": [
+        {
+          "type": "debuff",
+          "target": "enemy",
+          "stat": "fire_dot",
+          "value": 6,
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "id": "rapid_fire",
+      "name": "Rapid Fire",
+      "description": "Unleash a flurry of shots, increasing your attack pace for a short time.",
+      "class": "hunter",
+      "level_required": 14,
+      "resource_type": "focus",
+      "resource_cost": 0,
+      "cooldown": 8,
+      "damage": null,
+      "effects": [
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "extra_attack",
+          "value": 1,
+          "duration": 2
+        },
+        {
+          "type": "buff",
+          "target": "self",
+          "stat": "damage_bonus",
+          "value": 0.15,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "id": "kill_shot",
+      "name": "Kill Shot",
+      "description": "A finishing shot designed to end fleeing or wounded foes.",
+      "class": "hunter",
+      "level_required": 16,
+      "resource_type": "focus",
+      "resource_cost": 25,
+      "cooldown": 5,
+      "damage": {
+        "base": 40,
+        "scaling_stat": "agility",
+        "scaling_factor": 0.9
+      },
+      "effects": [],
+      "conditions": {
+        "target_health_below": 0.2
+      }
+    },
+    {
+      "id": "basic_attack",
+      "name": "Attack",
+      "description": "A basic weapon attack.",
+      "class": "all",
+      "level_required": 1,
+      "resource_type": null,
+      "resource_cost": 0,
+      "cooldown": 0,
+      "damage": {
+        "base": 5,
+        "scaling_stat": "auto",
+        "scaling_factor": 0.3
+      },
+      "effects": []
+    }
+  ]
+}

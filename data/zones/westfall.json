@@ -1,0 +1,546 @@
+{
+  "zone": {
+    "id": "westfall",
+    "name": "Westfall",
+    "description": "Once fertile farmland, Westfall has fallen on hard times. Golden fields lie untended, harvest constructs run amok, and the Defias Brotherhood gathers strength in the shadows.",
+    "level_range": { "min": 10, "max": 20 },
+    "ambient_enemies": [
+      "coyote",
+      "greater_coyote",
+      "flesh_ripper",
+      "boar",
+      "defias_highwayman",
+      "harvest_watcher"
+    ],
+    "connections": [
+      { "zone_id": "elwynn_forest", "location": "westfall_border", "direction": "east" },
+      { "zone_id": "duskwood", "location": "duskwood_bridge", "direction": "south", "locked": true, "description": "Path to Duskwood (not yet available)" }
+    ],
+    "locations": [
+      {
+        "id": "westfall_border",
+        "name": "Westfall Border",
+        "description": "A dusty road leads from the forests of Elwynn into the wide, windswept plains of Westfall.",
+        "type": "zone_border",
+        "is_safe_zone": true,
+        "npcs": [],
+        "enemies": [],
+        "connections": [
+          {
+            "zone_id": "elwynn_forest",
+            "direction": "east",
+            "description": "Return to Elwynn Forest."
+          },
+          {
+            "location_id": "dusty_road",
+            "direction": "west",
+            "description": "Follow the road deeper into Westfall."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Broken Wagon",
+            "description": "An abandoned wagon with missing wheels — a sign of the area's decline."
+          }
+        ]
+      },
+      {
+        "id": "dusty_road",
+        "name": "Dusty Road",
+        "description": "The main road through northern Westfall, flanked by overgrown fields and crumbling fences.",
+        "type": "crossroads",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["coyote", "greater_coyote", "boar"],
+        "encounter_chance": 0.25,
+        "connections": [
+          {
+            "location_id": "westfall_border",
+            "direction": "east",
+            "description": "Head back toward Elwynn."
+          },
+          {
+            "location_id": "furlbrows_farm",
+            "direction": "northwest",
+            "description": "A rutted path leads to a farmstead."
+          },
+          {
+            "location_id": "sentinel_hill",
+            "direction": "south",
+            "description": "The road continues toward a watchtower on the horizon."
+          },
+          {
+            "location_id": "saldeans_farm",
+            "direction": "southeast",
+            "description": "Fields stretch toward a distant farmhouse."
+          }
+        ]
+      },
+      {
+        "id": "furlbrows_farm",
+        "name": "Furlbrow's Farm",
+        "description": "A dilapidated farmstead where the Furlbrows cling to what little they have left.",
+        "type": "farm",
+        "is_safe_zone": true,
+        "npcs": ["verna_furlbrow"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "dusty_road",
+            "direction": "southeast",
+            "description": "Return to the main road."
+          },
+          {
+            "location_id": "longshore",
+            "direction": "west",
+            "description": "A dirt track heads toward the coast."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Collapsed Barn",
+            "description": "A barn roof has caved in, straw spilling out."
+          },
+          { "name": "Dry Well", "description": "A stone well long since gone dry." }
+        ]
+      },
+      {
+        "id": "sentinel_hill",
+        "name": "Sentinel Hill",
+        "description": "A fortified hilltop encampment built around a central watchtower. The People’s Militia rallies here to reclaim Westfall.",
+        "type": "town",
+        "is_safe_zone": true,
+        "npcs": ["gryan_stoutmantle", "innkeeper_heather", "quartermaster_hudson"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "dusty_road",
+            "direction": "north",
+            "description": "The main road leads back toward Elwynn."
+          },
+          {
+            "location_id": "saldeans_farm",
+            "direction": "northeast",
+            "description": "Fields stretch toward a working farm."
+          },
+          {
+            "location_id": "dead_acres",
+            "direction": "east",
+            "description": "Abandoned fields lie to the east."
+          },
+          {
+            "location_id": "moonbrook",
+            "direction": "southwest",
+            "description": "A ruined town can be seen in the distance."
+          },
+          {
+            "location_id": "dagger_hills",
+            "direction": "south",
+            "description": "Rocky hills rise to the south."
+          },
+          {
+            "location_id": "longshore",
+            "direction": "west",
+            "description": "The smell of salt and kelp drifts in from the coast."
+          }
+        ],
+        "services": ["inn", "vendors", "trainers", "repair"],
+        "points_of_interest": [
+          {
+            "name": "Central Tower",
+            "description": "A wooden tower with a commanding view of the plains."
+          },
+          {
+            "name": "Militia Camp",
+            "description": "Makeshift tents and weapon racks for the People's Militia."
+          },
+          {
+            "name": "Signal Fire",
+            "description": "A ready pile of logs to warn Stormwind if Westfall falls."
+          }
+        ]
+      },
+      {
+        "id": "saldeans_farm",
+        "name": "Saldean's Farm",
+        "description": "One of the few farms still producing crops. The Saldeans work tirelessly despite the danger.",
+        "type": "farm",
+        "is_safe_zone": true,
+        "npcs": ["farmer_saldean", "salma_saldean"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "dusty_road",
+            "direction": "northwest",
+            "description": "A wagon track joins the main road."
+          },
+          {
+            "location_id": "sentinel_hill",
+            "direction": "west",
+            "description": "The militia's beacon rises on the horizon."
+          },
+          {
+            "location_id": "dead_acres",
+            "direction": "south",
+            "description": "Abandoned fields stretch away."
+          }
+        ],
+        "points_of_interest": [
+          { "name": "Grain Silos", "description": "Tall silos filled with the season's harvest." },
+          {
+            "name": "Chicken Coop",
+            "description": "A rickety coop still full of clucking chickens."
+          }
+        ]
+      },
+      {
+        "id": "dead_acres",
+        "name": "The Dead Acres",
+        "description": "Fields once fertile now lie fallow. Harvest constructs patrol mindlessly among the withered crops.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["harvest_watcher", "harvest_sentry", "defias_trapper"],
+        "encounter_chance": 0.45,
+        "connections": [
+          {
+            "location_id": "sentinel_hill",
+            "direction": "west",
+            "description": "The hilltop encampment watches over the fields."
+          },
+          {
+            "location_id": "saldeans_farm",
+            "direction": "north",
+            "description": "Return to the working farm."
+          },
+          {
+            "location_id": "jangolode_mine",
+            "direction": "southeast",
+            "description": "A mine entrance looms near a rocky rise."
+          }
+        ],
+        "points_of_interest": [
+          { "name": "Broken Scarecrow", "description": "A tattered scarecrow beaten by the wind." },
+          {
+            "name": "Idle Harvester",
+            "description": "A rusted harvest golem stands motionless—until it doesn't."
+          }
+        ]
+      },
+      {
+        "id": "jangolode_mine",
+        "name": "Jangolode Mine",
+        "description": "A tunnel complex seized by the Defias. Miners were driven out; bandits now dig for their own profit.",
+        "type": "dungeon",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_trapper", "defias_lookout", "defias_highwayman"],
+        "boss": "defias_overseer",
+        "encounter_chance": 0.6,
+        "connections": [
+          {
+            "location_id": "dead_acres",
+            "direction": "northwest",
+            "description": "A narrow path climbs back to the fields."
+          },
+          {
+            "location_id": "moonbrook",
+            "direction": "southwest",
+            "description": "A hidden trail leads toward the ruined town."
+          }
+        ],
+        "environment": {
+          "lighting": "dim",
+          "hazards": ["unstable_tunnels", "falling_rocks"]
+        }
+      },
+      {
+        "id": "moonbrook",
+        "name": "Moonbrook",
+        "description": "A once-thriving town now a Defias stronghold. Red bandanas flutter from broken windows.",
+        "type": "ruins",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_highwayman", "defias_trapper", "defias_sapper"],
+        "encounter_chance": 0.5,
+        "connections": [
+          {
+            "location_id": "sentinel_hill",
+            "direction": "northeast",
+            "description": "The militia's beacon is visible in the distance."
+          },
+          {
+            "location_id": "jangolode_mine",
+            "direction": "northeast",
+            "description": "A path cuts toward the mine."
+          },
+          {
+            "location_id": "deadmines_entrance",
+            "direction": "south",
+            "description": "An ominous cavern yawns to the south."
+          },
+          {
+            "location_id": "dagger_hills",
+            "direction": "west",
+            "description": "Rocky hills surround the town's outskirts."
+          }
+        ],
+        "points_of_interest": [
+          { "name": "Abandoned Inn", "description": "A gutted inn where Defias gather." },
+          {
+            "name": "Hidden Cache",
+            "description": "Crates marked with the Defias sigil are stacked in an alley."
+          }
+        ]
+      },
+      {
+        "id": "deadmines_entrance",
+        "name": "Deadmines Entrance",
+        "description": "A cavern entrance concealed behind Moonbrook. The air smells of powder and damp rope — the Defias plot within.",
+        "type": "dungeon_entrance",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_lookout", "defias_sapper"],
+        "encounter_chance": 0.7,
+        "connections": [
+          {
+            "location_id": "moonbrook",
+            "direction": "north",
+            "description": "Return to the ruined streets of Moonbrook."
+          },
+          {
+            "location_id": "dagger_hills",
+            "direction": "west",
+            "description": "A narrow trail climbs into the hills."
+          },
+          {
+            "location_id": "deadmines_tunnels",
+            "direction": "down",
+            "description": "Descend into the mine tunnels."
+          }
+        ],
+        "environment": {
+          "lighting": "dark",
+          "hazards": ["explosive_barrels", "rickety_bridges"]
+        }
+      },
+      {
+        "id": "deadmines_tunnels",
+        "name": "Deadmines Tunnels",
+        "description": "Cramped mine shafts reinforced with rotting beams. Defias sentries watch every shadow.",
+        "type": "dungeon",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_lookout", "defias_trapper", "defias_sapper"],
+        "encounter_chance": 0.6,
+        "connections": [
+          {
+            "location_id": "deadmines_entrance",
+            "direction": "up",
+            "description": "Climb back toward the entrance."
+          },
+          {
+            "location_id": "deadmines_foundry",
+            "direction": "south",
+            "description": "Follow the tracks deeper into the mine."
+          }
+        ],
+        "environment": {
+          "lighting": "dim",
+          "hazards": ["unstable_tunnels"]
+        }
+      },
+      {
+        "id": "deadmines_foundry",
+        "name": "Goblin Foundry",
+        "description": "An underground workshop where goblin engineers forge weapons for the Defias.",
+        "type": "dungeon",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_highwayman", "defias_sapper", "harvest_watcher"],
+        "encounter_chance": 0.65,
+        "connections": [
+          {
+            "location_id": "deadmines_tunnels",
+            "direction": "north",
+            "description": "Return to the tunnels."
+          },
+          {
+            "location_id": "deadmines_docks",
+            "direction": "south",
+            "description": "Rails lead toward an underground dock."
+          }
+        ],
+        "environment": {
+          "lighting": "dim",
+          "hazards": ["explosive_barrels", "fire_traps"]
+        }
+      },
+      {
+        "id": "deadmines_docks",
+        "name": "Smuggler's Docks",
+        "description": "An underground cove housing a hidden Defias ship. Torches reflect off dark waters.",
+        "type": "dungeon",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_highwayman", "defias_trapper", "defias_sapper"],
+        "encounter_chance": 0.7,
+        "connections": [
+          {
+            "location_id": "deadmines_foundry",
+            "direction": "north",
+            "description": "Tracks lead back toward the foundry."
+          },
+          {
+            "location_id": "vancleef_quarters",
+            "direction": "aboard",
+            "description": "Board the Defias ship."
+          }
+        ],
+        "environment": {
+          "lighting": "dim",
+          "hazards": ["rickety_bridges", "deep_water"]
+        }
+      },
+      {
+        "id": "vancleef_quarters",
+        "name": "VanCleef's Quarters",
+        "description": "The captain's quarters aboard the Defias vessel. VanCleef plots rebellion here.",
+        "type": "boss_room",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_highwayman"],
+        "boss": "edwin_vancleef",
+        "encounter_chance": 0.9,
+        "connections": [
+          {
+            "location_id": "deadmines_docks",
+            "direction": "disembark",
+            "description": "Return to the docks."
+          }
+        ],
+        "points_of_interest": [
+          { "name": "Captain's Table", "description": "Maps of Stormwind shipping routes are spread across the table." },
+          { "name": "Armory Crates", "description": "Crates of weapons stamped with the Defias sigil." }
+        ],
+        "environment": {
+          "lighting": "lantern",
+          "hazards": ["explosive_barrels"]
+        }
+      },
+      {
+        "id": "longshore",
+        "name": "The Longshore",
+        "description": "Westfall's coastline. Waves crash against the shore while murlocs build crude huts among the wreckage of ships.",
+        "type": "coast",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["murloc_forager", "murloc_warrior", "murloc_oracle"],
+        "encounter_chance": 0.4,
+        "connections": [
+          {
+            "location_id": "furlbrows_farm",
+            "direction": "east",
+            "description": "A trail leads back inland."
+          },
+          {
+            "location_id": "sentinel_hill",
+            "direction": "east",
+            "description": "The beacon fires of Sentinel Hill are visible farther inland."
+          },
+          {
+            "location_id": "westfall_lighthouse",
+            "direction": "south",
+            "description": "A lighthouse rises along the coast."
+          }
+        ],
+        "points_of_interest": [
+          { "name": "Shipwreck", "description": "Barnacle-encrusted timbers jut from the sand." },
+          {
+            "name": "Murloc Huts",
+            "description": "Tide-washed shacks made of driftwood and seaweed."
+          }
+        ]
+      },
+      {
+        "id": "westfall_lighthouse",
+        "name": "Westfall Lighthouse",
+        "description": "A lonely lighthouse stands watch over the cliffs. Its keeper keeps the flame alive despite meager supplies.",
+        "type": "lighthouse",
+        "is_safe_zone": true,
+        "npcs": ["lightkeeper_grayson"],
+        "enemies": [],
+        "connections": [
+          {
+            "location_id": "longshore",
+            "direction": "north",
+            "description": "Follow the coast northward."
+          },
+          {
+            "location_id": "dagger_hills",
+            "direction": "east",
+            "description": "A rocky path climbs toward the hills."
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Lightkeeper's Quarters",
+            "description": "A sparse living space filled with nautical charts."
+          },
+          {
+            "name": "Beacon Flame",
+            "description": "A bright flame fueled by dwindling oil reserves."
+          }
+        ]
+      },
+      {
+        "id": "dagger_hills",
+        "name": "Dagger Hills",
+        "description": "Jagged hills and rocky ridges shelter Defias camps and prowling beasts. The terrain gives ambushers an advantage.",
+        "type": "wilderness",
+        "is_safe_zone": false,
+        "npcs": [],
+        "enemies": ["defias_highwayman", "defias_trapper", "flesh_ripper"],
+        "encounter_chance": 0.5,
+        "connections": [
+          {
+            "location_id": "sentinel_hill",
+            "direction": "north",
+            "description": "The beacon atop Sentinel Hill is visible over the ridges."
+          },
+          {
+            "location_id": "moonbrook",
+            "direction": "east",
+            "description": "A narrow pass leads back toward Moonbrook."
+          },
+          {
+            "location_id": "deadmines_entrance",
+            "direction": "east",
+            "description": "A hidden trail slips down toward the mine entrance."
+          },
+          {
+            "location_id": "westfall_lighthouse",
+            "direction": "west",
+            "description": "A rough track descends toward the sea."
+          },
+          {
+            "zone_id": "duskwood",
+            "direction": "south",
+            "description": "A forest road winds toward the dark woods of Duskwood. (Not yet available)",
+            "locked": true
+          }
+        ],
+        "points_of_interest": [
+          {
+            "name": "Bandit Camp",
+            "description": "Tents and stolen crates hidden between boulders."
+          },
+          {
+            "name": "Overlook Ridge",
+            "description": "A vantage point with a sweeping view of Westfall's plains."
+          }
+        ]
+      }
+    ]
+  }
+}

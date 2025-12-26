@@ -1,0 +1,844 @@
+{
+  "items": {
+    "equipment": {
+      "weapons": [
+        {
+          "id": "worn_shortsword",
+          "name": "Worn Shortsword",
+          "description": "A battered but serviceable blade.",
+          "slot": "weapon",
+          "type": "sword",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "damage_bonus": 2
+          },
+          "sell_value": 1
+        },
+        {
+          "id": "wooden_staff",
+          "name": "Wooden Staff",
+          "description": "A simple staff carved from oak.",
+          "slot": "weapon",
+          "type": "staff",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "damage_bonus": 1,
+            "intellect": 1
+          },
+          "sell_value": 1
+        },
+        {
+          "id": "rusty_dagger",
+          "name": "Rusty Dagger",
+          "description": "A quick blade, though worse for wear.",
+          "slot": "weapon",
+          "type": "dagger",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "damage_bonus": 1,
+            "agility": 1
+          },
+          "sell_value": 1
+        },
+        {
+          "id": "hunting_bow",
+          "name": "Hunting Bow",
+          "description": "A simple bow used for hunting small game.",
+          "slot": "weapon",
+          "type": "bow",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "damage_bonus": 2
+          },
+          "sell_value": 1
+        },
+        {
+          "id": "militia_shortsword",
+          "name": "Militia Shortsword",
+          "description": "Standard issue for Stormwind's militia.",
+          "slot": "weapon",
+          "type": "sword",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "damage_bonus": 4,
+            "strength": 1
+          },
+          "sell_value": 5
+        },
+        {
+          "id": "gnarled_oak_staff",
+          "name": "Gnarled Oak Staff",
+          "description": "A twisted staff humming with faint magic.",
+          "slot": "weapon",
+          "type": "staff",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "damage_bonus": 2,
+            "intellect": 3
+          },
+          "sell_value": 5
+        },
+        {
+          "id": "sharp_dagger",
+          "name": "Sharp Dagger",
+          "description": "A well-honed blade that gleams in the light.",
+          "slot": "weapon",
+          "type": "dagger",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "damage_bonus": 3,
+            "agility": 2
+          },
+          "sell_value": 5
+        },
+        {
+          "id": "sturdy_longbow",
+          "name": "Sturdy Longbow",
+          "description": "A reliable bow with good draw strength.",
+          "slot": "weapon",
+          "type": "bow",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "damage_bonus": 4,
+            "agility": 1
+          },
+          "sell_value": 5
+        },
+        {
+          "id": "kobold_mining_pick",
+          "name": "Kobold Mining Pick",
+          "description": "Taken from a kobold. Surprisingly effective as a weapon.",
+          "slot": "weapon",
+          "type": "axe",
+          "rarity": "common",
+          "level_required": 3,
+          "stats": {
+            "damage_bonus": 6,
+            "strength": 2
+          },
+          "sell_value": 8
+        },
+        {
+          "id": "defias_cutlass",
+          "name": "Defias Cutlass",
+          "description": "A curved blade favored by Defias thugs.",
+          "slot": "weapon",
+          "type": "sword",
+          "rarity": "uncommon",
+          "level_required": 4,
+          "stats": {
+            "damage_bonus": 8,
+            "agility": 3,
+            "strength": 2
+          },
+          "sell_value": 15
+        },
+        {
+          "id": "spellbinder_rod",
+          "name": "Spellbinder Rod",
+          "description": "A rod crackling with arcane energy.",
+          "slot": "weapon",
+          "type": "staff",
+          "rarity": "uncommon",
+          "level_required": 4,
+          "stats": {
+            "damage_bonus": 4,
+            "intellect": 6,
+            "max_mana_bonus": 15
+          },
+          "sell_value": 15
+        },
+        {
+          "id": "forest_tracker_bow",
+          "name": "Forest Tracker Bow",
+          "description": "Crafted by Elwynn's finest hunters.",
+          "slot": "weapon",
+          "type": "bow",
+          "rarity": "uncommon",
+          "level_required": 5,
+          "stats": {
+            "damage_bonus": 10,
+            "agility": 5
+          },
+          "sell_value": 20
+        },
+        {
+          "id": "hoggers_sharpened_claw",
+          "name": "Hogger's Sharpened Claw",
+          "description": "A massive claw from the gnoll warlord himself. Radiates savage power.",
+          "slot": "weapon",
+          "type": "fist",
+          "rarity": "rare",
+          "level_required": 6,
+          "stats": {
+            "damage_bonus": 14,
+            "strength": 5,
+            "agility": 3
+          },
+          "sell_value": 50
+        }
+      ],
+      "armor": [
+        {
+          "id": "threadbare_shirt",
+          "name": "Threadbare Shirt",
+          "description": "A worn shirt that offers minimal protection.",
+          "slot": "chest",
+          "type": "cloth",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "armor": 2
+          },
+          "sell_value": 1
+        },
+        {
+          "id": "ragged_pants",
+          "name": "Ragged Pants",
+          "description": "Patched trousers that have seen better days.",
+          "slot": "legs",
+          "type": "cloth",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "armor": 1
+          },
+          "sell_value": 1
+        },
+        {
+          "id": "worn_leather_boots",
+          "name": "Worn Leather Boots",
+          "description": "Scuffed boots with thin soles.",
+          "slot": "feet",
+          "type": "leather",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "armor": 1
+          },
+          "sell_value": 1
+        },
+        {
+          "id": "militia_chain_shirt",
+          "name": "Militia Chain Shirt",
+          "description": "Basic chainmail issued to Stormwind defenders.",
+          "slot": "chest",
+          "type": "mail",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "armor": 8,
+            "stamina": 2
+          },
+          "sell_value": 6
+        },
+        {
+          "id": "quilted_robe",
+          "name": "Quilted Robe",
+          "description": "A padded robe offering warmth and slight protection.",
+          "slot": "chest",
+          "type": "cloth",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "armor": 4,
+            "intellect": 2
+          },
+          "sell_value": 5
+        },
+        {
+          "id": "leather_tunic",
+          "name": "Leather Tunic",
+          "description": "Supple leather armor allowing free movement.",
+          "slot": "chest",
+          "type": "leather",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "armor": 6,
+            "agility": 2
+          },
+          "sell_value": 5
+        },
+        {
+          "id": "hide_leggings",
+          "name": "Hide Leggings",
+          "description": "Sturdy leggings made from tanned hide.",
+          "slot": "legs",
+          "type": "leather",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "armor": 4,
+            "agility": 1
+          },
+          "sell_value": 4
+        },
+        {
+          "id": "militia_boots",
+          "name": "Militia Boots",
+          "description": "Reinforced boots standard for the militia.",
+          "slot": "feet",
+          "type": "mail",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "armor": 4,
+            "stamina": 1
+          },
+          "sell_value": 4
+        },
+        {
+          "id": "cloth_gloves",
+          "name": "Cloth Gloves",
+          "description": "Simple cloth gloves.",
+          "slot": "hands",
+          "type": "cloth",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "armor": 1,
+            "intellect": 1
+          },
+          "sell_value": 2
+        },
+        {
+          "id": "kobold_skull_cap",
+          "name": "Kobold Skull Cap",
+          "description": "A crude helmet fashioned from kobold bones. Disturbing but effective.",
+          "slot": "head",
+          "type": "leather",
+          "rarity": "common",
+          "level_required": 3,
+          "stats": {
+            "armor": 5,
+            "stamina": 2
+          },
+          "sell_value": 7
+        },
+        {
+          "id": "defias_leather_vest",
+          "name": "Defias Leather Vest",
+          "description": "Black leather armor worn by Defias bandits.",
+          "slot": "chest",
+          "type": "leather",
+          "rarity": "uncommon",
+          "level_required": 4,
+          "stats": {
+            "armor": 10,
+            "agility": 4,
+            "stamina": 2
+          },
+          "sell_value": 15
+        },
+        {
+          "id": "apprentice_robe",
+          "name": "Apprentice's Robe",
+          "description": "A robe worn by mages in training. Woven with minor enchantments.",
+          "slot": "chest",
+          "type": "cloth",
+          "rarity": "uncommon",
+          "level_required": 4,
+          "stats": {
+            "armor": 5,
+            "intellect": 5,
+            "max_mana_bonus": 10
+          },
+          "sell_value": 15
+        },
+        {
+          "id": "chainmail_hauberk",
+          "name": "Chainmail Hauberk",
+          "description": "A heavy chainmail shirt offering solid protection.",
+          "slot": "chest",
+          "type": "mail",
+          "rarity": "uncommon",
+          "level_required": 5,
+          "stats": {
+            "armor": 15,
+            "stamina": 4,
+            "strength": 3
+          },
+          "sell_value": 20
+        },
+        {
+          "id": "gnoll_hide_cloak",
+          "name": "Gnoll Hide Cloak",
+          "description": "A rough cloak made from gnoll pelts. Smells terrible.",
+          "slot": "back",
+          "type": "leather",
+          "rarity": "uncommon",
+          "level_required": 5,
+          "stats": {
+            "armor": 6,
+            "agility": 3,
+            "stamina": 3
+          },
+          "sell_value": 18
+        },
+        {
+          "id": "hoggers_war_harness",
+          "name": "Hogger's War Harness",
+          "description": "The battle-worn armor of the infamous gnoll warlord.",
+          "slot": "chest",
+          "type": "leather",
+          "rarity": "rare",
+          "level_required": 6,
+          "stats": {
+            "armor": 18,
+            "strength": 5,
+            "stamina": 6,
+            "agility": 3
+          },
+          "sell_value": 60
+        }
+      ],
+      "accessories": [
+        {
+          "id": "tarnished_ring",
+          "name": "Tarnished Ring",
+          "description": "A simple ring, slightly corroded.",
+          "slot": "ring",
+          "type": "accessory",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "stamina": 1
+          },
+          "sell_value": 2
+        },
+        {
+          "id": "copper_chain_necklace",
+          "name": "Copper Chain Necklace",
+          "description": "A thin copper chain with no adornment.",
+          "slot": "neck",
+          "type": "accessory",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "stamina": 2
+          },
+          "sell_value": 4
+        },
+        {
+          "id": "minor_healing_charm",
+          "name": "Minor Healing Charm",
+          "description": "A small charm that pulses with restorative magic.",
+          "slot": "trinket",
+          "type": "accessory",
+          "rarity": "common",
+          "level_required": 3,
+          "stats": {
+            "health_regen_bonus": 1
+          },
+          "sell_value": 8
+        },
+        {
+          "id": "silver_ring",
+          "name": "Silver Ring",
+          "description": "A polished silver band.",
+          "slot": "ring",
+          "type": "accessory",
+          "rarity": "common",
+          "level_required": 3,
+          "stats": {
+            "intellect": 2,
+            "stamina": 1
+          },
+          "sell_value": 6
+        },
+        {
+          "id": "wolf_tooth_talisman",
+          "name": "Wolf Tooth Talisman",
+          "description": "A necklace strung with wolf fangs. Grants predatory instincts.",
+          "slot": "neck",
+          "type": "accessory",
+          "rarity": "uncommon",
+          "level_required": 4,
+          "stats": {
+            "agility": 3,
+            "damage_bonus": 2
+          },
+          "sell_value": 12
+        },
+        {
+          "id": "defias_signet",
+          "name": "Defias Signet",
+          "description": "A ring bearing the symbol of the Defias Brotherhood.",
+          "slot": "ring",
+          "type": "accessory",
+          "rarity": "uncommon",
+          "level_required": 5,
+          "stats": {
+            "agility": 3,
+            "strength": 2,
+            "stamina": 2
+          },
+          "sell_value": 15
+        },
+        {
+          "id": "gnoll_commanders_medallion",
+          "name": "Gnoll Commander's Medallion",
+          "description": "A crude medallion marking gnoll leadership. Taken from Hogger.",
+          "slot": "neck",
+          "type": "accessory",
+          "rarity": "rare",
+          "level_required": 6,
+          "stats": {
+            "strength": 4,
+            "stamina": 5,
+            "max_health_bonus": 15
+          },
+          "sell_value": 45
+        }
+      ],
+      "shields": [
+        {
+          "id": "splintered_buckler",
+          "name": "Splintered Buckler",
+          "description": "A small wooden shield with several cracks.",
+          "slot": "off_hand",
+          "type": "shield",
+          "rarity": "poor",
+          "level_required": 1,
+          "stats": {
+            "armor": 3
+          },
+          "sell_value": 1
+        },
+        {
+          "id": "militia_shield",
+          "name": "Militia Shield",
+          "description": "A sturdy shield bearing Stormwind's crest.",
+          "slot": "off_hand",
+          "type": "shield",
+          "rarity": "common",
+          "level_required": 2,
+          "stats": {
+            "armor": 8,
+            "stamina": 2
+          },
+          "sell_value": 6
+        },
+        {
+          "id": "reinforced_tower_shield",
+          "name": "Reinforced Tower Shield",
+          "description": "A large shield banded with iron. Heavy but protective.",
+          "slot": "off_hand",
+          "type": "shield",
+          "rarity": "uncommon",
+          "level_required": 5,
+          "stats": {
+            "armor": 15,
+            "stamina": 4,
+            "strength": 2
+          },
+          "sell_value": 20
+        }
+      ]
+    },
+    "consumables": [
+      {
+        "id": "minor_healing_potion",
+        "name": "Minor Healing Potion",
+        "description": "Restores a small amount of health.",
+        "type": "potion",
+        "effect": {
+          "type": "restore_health",
+          "value": 30
+        },
+        "stack_limit": 10,
+        "buy_value": 5,
+        "sell_value": 1
+      },
+      {
+        "id": "healing_potion",
+        "name": "Healing Potion",
+        "description": "Restores a moderate amount of health.",
+        "type": "potion",
+        "effect": {
+          "type": "restore_health",
+          "value": 60
+        },
+        "stack_limit": 10,
+        "buy_value": 15,
+        "sell_value": 4
+      },
+      {
+        "id": "minor_mana_potion",
+        "name": "Minor Mana Potion",
+        "description": "Restores a small amount of mana.",
+        "type": "potion",
+        "effect": {
+          "type": "restore_mana",
+          "value": 25
+        },
+        "stack_limit": 10,
+        "buy_value": 5,
+        "sell_value": 1
+      },
+      {
+        "id": "mana_potion",
+        "name": "Mana Potion",
+        "description": "Restores a moderate amount of mana.",
+        "type": "potion",
+        "effect": {
+          "type": "restore_mana",
+          "value": 50
+        },
+        "stack_limit": 10,
+        "buy_value": 15,
+        "sell_value": 4
+      },
+      {
+        "id": "bread",
+        "name": "Bread",
+        "description": "Crusty bread that restores health when eaten out of combat.",
+        "type": "food",
+        "effect": {
+          "type": "restore_health_out_of_combat",
+          "value": 40,
+          "duration": 3
+        },
+        "stack_limit": 20,
+        "buy_value": 1,
+        "sell_value": 0
+      },
+      {
+        "id": "roasted_boar_meat",
+        "name": "Roasted Boar Meat",
+        "description": "Hearty roasted meat that fills the belly.",
+        "type": "food",
+        "effect": {
+          "type": "restore_health_out_of_combat",
+          "value": 80,
+          "duration": 4
+        },
+        "stack_limit": 20,
+        "buy_value": 3,
+        "sell_value": 1
+      },
+      {
+        "id": "refreshing_spring_water",
+        "name": "Refreshing Spring Water",
+        "description": "Cool water that restores mana when drunk out of combat.",
+        "type": "drink",
+        "effect": {
+          "type": "restore_mana_out_of_combat",
+          "value": 40,
+          "duration": 3
+        },
+        "stack_limit": 20,
+        "buy_value": 1,
+        "sell_value": 0
+      },
+      {
+        "id": "moonberry_juice",
+        "name": "Moonberry Juice",
+        "description": "A refreshing drink made from moonberries.",
+        "type": "drink",
+        "effect": {
+          "type": "restore_mana_out_of_combat",
+          "value": 80,
+          "duration": 4
+        },
+        "stack_limit": 20,
+        "buy_value": 3,
+        "sell_value": 1
+      },
+      {
+        "id": "elixir_of_minor_fortitude",
+        "name": "Elixir of Minor Fortitude",
+        "description": "Increases maximum health by 20 for 10 minutes (or 10 combat encounters).",
+        "type": "elixir",
+        "effect": {
+          "type": "buff",
+          "stat": "max_health_bonus",
+          "value": 20,
+          "duration_encounters": 10
+        },
+        "stack_limit": 5,
+        "buy_value": 10,
+        "sell_value": 3
+      },
+      {
+        "id": "elixir_of_lion_strength",
+        "name": "Elixir of Lion's Strength",
+        "description": "Increases strength by 4 for 10 minutes (or 10 combat encounters).",
+        "type": "elixir",
+        "effect": {
+          "type": "buff",
+          "stat": "strength",
+          "value": 4,
+          "duration_encounters": 10
+        },
+        "stack_limit": 5,
+        "buy_value": 10,
+        "sell_value": 3
+      },
+      {
+        "id": "scroll_of_protection",
+        "name": "Scroll of Protection",
+        "description": "Increases armor by 10 for the next combat encounter.",
+        "type": "scroll",
+        "effect": {
+          "type": "buff",
+          "stat": "armor",
+          "value": 10,
+          "duration_encounters": 1
+        },
+        "stack_limit": 5,
+        "buy_value": 8,
+        "sell_value": 2
+      },
+      {
+        "id": "antidote",
+        "name": "Antidote",
+        "description": "Removes poison effects.",
+        "type": "potion",
+        "effect": {
+          "type": "remove_debuff",
+          "debuff_type": "poison"
+        },
+        "stack_limit": 5,
+        "buy_value": 6,
+        "sell_value": 2
+      },
+      {
+        "id": "bandage",
+        "name": "Linen Bandage",
+        "description": "Use out of combat to restore health over time.",
+        "type": "bandage",
+        "effect": {
+          "type": "restore_health_out_of_combat",
+          "value": 50,
+          "duration": 2
+        },
+        "stack_limit": 20,
+        "buy_value": 2,
+        "sell_value": 0
+      }
+    ],
+    "quest_items": [
+      {
+        "id": "kobold_candle",
+        "name": "Kobold Candle",
+        "description": "A crude candle cherished by kobolds. 'You no take candle!'",
+        "quest_id": "kobold_candles",
+        "stack_limit": 8
+      },
+      {
+        "id": "red_bandana",
+        "name": "Red Bandana",
+        "description": "A red cloth mask worn by Defias thugs.",
+        "quest_id": "defias_threat",
+        "stack_limit": 10
+      },
+      {
+        "id": "gold_dust",
+        "name": "Gold Dust",
+        "description": "Glittering gold dust extracted from the mines.",
+        "quest_id": "gold_dust_exchange",
+        "stack_limit": 10
+      },
+      {
+        "id": "marshal_dughan_report",
+        "name": "Report for Marshal Dughan",
+        "description": "A sealed report detailing gnoll movements in Elwynn Forest.",
+        "quest_id": "report_to_goldshire",
+        "stack_limit": 1
+      },
+      {
+        "id": "hoggers_claw",
+        "name": "Hogger's Claw",
+        "description": "A massive claw severed from the gnoll warlord. Proof of your victory.",
+        "quest_id": "wanted_hogger",
+        "stack_limit": 1
+      },
+      {
+        "id": "pristine_wolf_pelt",
+        "name": "Pristine Wolf Pelt",
+        "description": "A high-quality wolf pelt, perfect for leather working.",
+        "quest_id": "wolf_pelts",
+        "stack_limit": 6
+      },
+      {
+        "id": "miners_union_card",
+        "name": "Miner's Union Card",
+        "description": "Identification card for the Elwynn Miners' Union.",
+        "quest_id": "missing_miners",
+        "stack_limit": 4
+      }
+    ],
+    "junk": [
+      {
+        "id": "wolf_fang",
+        "name": "Wolf Fang",
+        "description": "A sharp fang from a forest wolf.",
+        "sell_value": 1
+      },
+      {
+        "id": "boar_tusk",
+        "name": "Boar Tusk",
+        "description": "A curved tusk from a wild boar.",
+        "sell_value": 1
+      },
+      {
+        "id": "kobold_rags",
+        "name": "Kobold Rags",
+        "description": "Torn, dirty cloth worn by kobolds.",
+        "sell_value": 1
+      },
+      {
+        "id": "spider_ichor",
+        "name": "Spider Ichor",
+        "description": "Foul-smelling fluid from a giant spider.",
+        "sell_value": 2
+      },
+      {
+        "id": "cracked_candle",
+        "name": "Cracked Candle",
+        "description": "A broken candle. Worthless to everyone except kobolds.",
+        "sell_value": 0
+      },
+      {
+        "id": "gnoll_mane",
+        "name": "Gnoll Mane",
+        "description": "Coarse hair from a gnoll's mane.",
+        "sell_value": 2
+      },
+      {
+        "id": "linen_cloth",
+        "name": "Linen Cloth",
+        "description": "A piece of basic cloth. Useful for tailoring or bandages.",
+        "sell_value": 1
+      },
+      {
+        "id": "copper_ore",
+        "name": "Copper Ore",
+        "description": "Raw copper ore from the mines.",
+        "sell_value": 3
+      },
+      {
+        "id": "small_pouch_of_coins",
+        "name": "Small Pouch of Coins",
+        "description": "A small leather pouch containing a few coins.",
+        "sell_value": 5
+      },
+      {
+        "id": "defias_orders",
+        "name": "Defias Orders",
+        "description": "Crumpled orders written in a crude hand. Might interest someone.",
+        "sell_value": 3
+      }
+    ]
+  }
+}

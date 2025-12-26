@@ -1,0 +1,253 @@
+{
+  "classes": [
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "description": "Warriors are plate-wearing fighters who charge into battle head-first, relying on heavy armor, powerful weapons, and sheer rage to defeat their enemies. They excel at both dealing and absorbing damage.",
+      "resource": {
+        "type": "rage",
+        "max": 100,
+        "start": 0,
+        "regen_per_turn": 0,
+        "gain_on_damage_dealt": 5,
+        "gain_on_damage_taken": 3
+      },
+      "base_stats": {
+        "health": 120,
+        "strength": 12,
+        "agility": 6,
+        "intellect": 3,
+        "stamina": 12,
+        "armor": 5
+      },
+      "stat_growth_per_level": {
+        "health": 15,
+        "strength": 2,
+        "agility": 1,
+        "intellect": 0,
+        "stamina": 2,
+        "armor": 2
+      },
+      "primary_stat": "strength",
+      "armor_proficiency": ["cloth", "leather", "mail", "plate"],
+      "weapon_proficiency": ["sword", "axe", "mace", "polearm", "fist", "dagger"],
+      "abilities": [
+        { "id": "heroic_strike", "level": 1 },
+        { "id": "shield_block", "level": 2 },
+        { "id": "rend", "level": 3 },
+        { "id": "battle_shout", "level": 4 },
+        { "id": "execute", "level": 5 },
+        { "id": "mortal_strike", "level": 8 },
+        { "id": "cleave", "level": 10 },
+        { "id": "last_stand", "level": 14 }
+      ],
+      "starting_equipment": {
+        "weapon": "worn_shortsword",
+        "off_hand": "splintered_buckler",
+        "chest": "threadbare_shirt",
+        "legs": "ragged_pants",
+        "feet": "worn_leather_boots"
+      },
+      "starting_abilities": ["basic_attack", "heroic_strike"]
+    },
+    {
+      "id": "mage",
+      "name": "Mage",
+      "description": "Mages wield the arcane arts, channeling devastating spells of fire, frost, and pure arcane energy. Though physically fragile, their magical prowess makes them formidable opponents who can incinerate enemies from a distance.",
+      "resource": {
+        "type": "mana",
+        "max": 100,
+        "start": 100,
+        "regen_per_turn": 5,
+        "regen_out_of_combat": 20
+      },
+      "base_stats": {
+        "health": 60,
+        "strength": 3,
+        "agility": 5,
+        "intellect": 14,
+        "stamina": 6,
+        "armor": 1
+      },
+      "stat_growth_per_level": {
+        "health": 8,
+        "strength": 0,
+        "agility": 1,
+        "intellect": 3,
+        "stamina": 1,
+        "armor": 0
+      },
+      "primary_stat": "intellect",
+      "armor_proficiency": ["cloth"],
+      "weapon_proficiency": ["staff", "dagger", "wand"],
+      "abilities": [
+        { "id": "fireball", "level": 1 },
+        { "id": "arcane_intellect", "level": 2 },
+        { "id": "frost_nova", "level": 3 },
+        { "id": "fire_blast", "level": 4 },
+        { "id": "arcane_missiles", "level": 5 },
+        { "id": "pyroblast", "level": 10 },
+        { "id": "blizzard", "level": 12 },
+        { "id": "evocation", "level": 14 }
+      ],
+      "starting_equipment": {
+        "weapon": "wooden_staff",
+        "chest": "threadbare_shirt",
+        "legs": "ragged_pants",
+        "feet": "worn_leather_boots"
+      },
+      "starting_abilities": ["basic_attack", "fireball"]
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "description": "Rogues are cunning assassins who strike from the shadows. Using a combination of stealth, poisons, and precise blade work, they build combo points to unleash devastating finishing moves.",
+      "resource": {
+        "type": "energy",
+        "max": 100,
+        "start": 100,
+        "regen_per_turn": 20,
+        "regen_out_of_combat": 100
+      },
+      "secondary_resource": {
+        "type": "combo_points",
+        "max": 5,
+        "start": 0
+      },
+      "base_stats": {
+        "health": 80,
+        "strength": 6,
+        "agility": 14,
+        "intellect": 4,
+        "stamina": 8,
+        "armor": 2
+      },
+      "stat_growth_per_level": {
+        "health": 10,
+        "strength": 1,
+        "agility": 3,
+        "intellect": 0,
+        "stamina": 1,
+        "armor": 1
+      },
+      "primary_stat": "agility",
+      "armor_proficiency": ["cloth", "leather"],
+      "weapon_proficiency": ["dagger", "sword", "fist"],
+      "abilities": [
+        { "id": "sinister_strike", "level": 1 },
+        { "id": "eviscerate", "level": 2 },
+        { "id": "cheap_shot", "level": 3 },
+        { "id": "backstab", "level": 4 },
+        { "id": "evasion", "level": 6 },
+        { "id": "rupture", "level": 8 },
+        { "id": "fan_of_knives", "level": 12 },
+        { "id": "kidney_shot", "level": 16 }
+      ],
+      "starting_equipment": {
+        "weapon": "rusty_dagger",
+        "chest": "threadbare_shirt",
+        "legs": "ragged_pants",
+        "feet": "worn_leather_boots"
+      },
+      "starting_abilities": ["basic_attack", "sinister_strike"]
+    },
+    {
+      "id": "priest",
+      "name": "Priest",
+      "description": "Priests are devoted spellcasters who call upon the power of the Light to heal wounds and smite enemies. They balance holy magic for restoration and shadow magic for damage, making them versatile in any situation.",
+      "resource": {
+        "type": "mana",
+        "max": 120,
+        "start": 120,
+        "regen_per_turn": 4,
+        "regen_out_of_combat": 25
+      },
+      "base_stats": {
+        "health": 65,
+        "strength": 3,
+        "agility": 4,
+        "intellect": 13,
+        "stamina": 7,
+        "armor": 1
+      },
+      "stat_growth_per_level": {
+        "health": 8,
+        "strength": 0,
+        "agility": 0,
+        "intellect": 3,
+        "stamina": 1,
+        "armor": 0
+      },
+      "primary_stat": "intellect",
+      "armor_proficiency": ["cloth"],
+      "weapon_proficiency": ["staff", "mace", "wand", "dagger"],
+      "abilities": [
+        { "id": "smite", "level": 1 },
+        { "id": "lesser_heal", "level": 1 },
+        { "id": "shadow_word_pain", "level": 2 },
+        { "id": "power_word_shield", "level": 3 },
+        { "id": "renew", "level": 4 },
+        { "id": "heal", "level": 5 },
+        { "id": "holy_fire", "level": 7 },
+        { "id": "mind_blast", "level": 10 },
+        { "id": "greater_heal", "level": 14 }
+      ],
+      "starting_equipment": {
+        "weapon": "wooden_staff",
+        "chest": "threadbare_shirt",
+        "legs": "ragged_pants",
+        "feet": "worn_leather_boots"
+      },
+      "starting_abilities": ["basic_attack", "smite", "lesser_heal"]
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "description": "Hunters are masters of ranged combat and survival in the wild. Armed with bows and accompanied by loyal animal companions, they track prey across any terrain and take them down with deadly precision.",
+      "resource": {
+        "type": "focus",
+        "max": 100,
+        "start": 50,
+        "regen_per_turn": 0,
+        "regen_out_of_combat": 100
+      },
+      "base_stats": {
+        "health": 85,
+        "strength": 5,
+        "agility": 13,
+        "intellect": 5,
+        "stamina": 9,
+        "armor": 2
+      },
+      "stat_growth_per_level": {
+        "health": 10,
+        "strength": 1,
+        "agility": 3,
+        "intellect": 0,
+        "stamina": 2,
+        "armor": 1
+      },
+      "primary_stat": "agility",
+      "armor_proficiency": ["cloth", "leather", "mail"],
+      "weapon_proficiency": ["bow", "gun", "crossbow", "polearm", "dagger", "axe"],
+      "abilities": [
+        { "id": "hunter_shot", "level": 1 },
+        { "id": "arcane_shot", "level": 2 },
+        { "id": "serpent_sting", "level": 3 },
+        { "id": "concussive_shot", "level": 4 },
+        { "id": "aimed_shot", "level": 6 },
+        { "id": "multi_shot", "level": 8 },
+        { "id": "explosive_shot", "level": 12 },
+        { "id": "rapid_fire", "level": 14 },
+        { "id": "kill_shot", "level": 16 }
+      ],
+      "starting_equipment": {
+        "weapon": "hunting_bow",
+        "chest": "threadbare_shirt",
+        "legs": "ragged_pants",
+        "feet": "worn_leather_boots"
+      },
+      "starting_abilities": ["basic_attack", "hunter_shot"]
+    }
+  ]
+}

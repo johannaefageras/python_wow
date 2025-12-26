@@ -1,0 +1,637 @@
+{
+  "quests": {
+    "elwynn_forest": [
+      {
+        "id": "report_to_goldshire",
+        "name": "Report to Goldshire",
+        "description": "Deliver the scouting report to Marshal Dughan in Goldshire.",
+        "quest_giver": "starting_area_npc",
+        "turn_in_npc": "marshal_dughan",
+        "level_required": 1,
+        "recommended_level": 1,
+        "prerequisites": [],
+        "objectives": [
+          {
+            "type": "delivery",
+            "item_id": "marshal_dughan_report",
+            "target_npc": "marshal_dughan",
+            "count": 1,
+            "description": "Deliver the report to Marshal Dughan"
+          }
+        ],
+        "dialogue": {
+          "offer": "The roads aren't safe, but this report must reach Marshal Dughan in Goldshire. He's coordinating the defense of Elwynn Forest. Can I trust you with this?",
+          "progress": "Have you delivered the report to Marshal Dughan yet?",
+          "complete": "Ah, the scouting report. Let me see... Hmm, this is troubling news. But you've done well bringing it to me. Elwynn needs more people like you."
+        },
+        "rewards": {
+          "experience": 150,
+          "gold": 1,
+          "items": [],
+          "choice_items": []
+        },
+        "unlocks_quests": ["the_gnoll_threat", "kobold_candles"]
+      },
+      {
+        "id": "kobold_candles",
+        "name": "Kobold Candles",
+        "description": "William Pestle needs kobold candles for his alchemical research.",
+        "quest_giver": "william_pestle",
+        "turn_in_npc": "william_pestle",
+        "level_required": 1,
+        "recommended_level": 2,
+        "prerequisites": ["report_to_goldshire"],
+        "objectives": [
+          {
+            "type": "collect",
+            "item_id": "kobold_candle",
+            "count": 8,
+            "description": "Collect 8 Kobold Candles",
+            "drop_from": ["kobold_tunneler", "kobold_miner", "kobold_geomancer"]
+          }
+        ],
+        "dialogue": {
+          "offer": "Those kobolds in the Fargodeep Mine carry the strangest candles. They burn with an unusual flame - I suspect there's something alchemically interesting about them. Bring me eight candles and I'll pay you well.",
+          "progress": "Have you collected those candles? I'm eager to study them.",
+          "complete": "Excellent! Look at that flame... yes, yes, this will do nicely. Here's your payment, and my thanks."
+        },
+        "rewards": {
+          "experience": 350,
+          "gold": 3,
+          "items": [{ "item_id": "minor_healing_potion", "count": 3 }],
+          "choice_items": []
+        },
+        "unlocks_quests": ["gold_dust_exchange"]
+      },
+      {
+        "id": "gold_dust_exchange",
+        "name": "Gold Dust Exchange",
+        "description": "William Pestle wants gold dust from the kobold geomancers.",
+        "quest_giver": "william_pestle",
+        "turn_in_npc": "william_pestle",
+        "level_required": 3,
+        "recommended_level": 4,
+        "prerequisites": ["kobold_candles"],
+        "objectives": [
+          {
+            "type": "collect",
+            "item_id": "gold_dust",
+            "count": 5,
+            "description": "Collect 5 Gold Dust",
+            "drop_from": ["kobold_geomancer", "goldtooth"]
+          }
+        ],
+        "dialogue": {
+          "offer": "The candles were fascinating, but now I need something rarer. The kobold geomancers carry pouches of gold dust - and I don't mean ordinary gold. It's infused with earth magic. Bring me five pouches.",
+          "progress": "The gold dust is essential for my research. Have you found any?",
+          "complete": "This dust... it tingles with power. You've done me a great service. Take this - I insist."
+        },
+        "rewards": {
+          "experience": 550,
+          "gold": 6,
+          "items": [],
+          "choice_items": [
+            { "item_id": "elixir_of_minor_fortitude", "count": 3 },
+            { "item_id": "elixir_of_lion_strength", "count": 3 }
+          ]
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "wolf_pelts",
+        "name": "Wolves at the Door",
+        "description": "Tomas the Trapper needs pristine wolf pelts for his leatherworking.",
+        "quest_giver": "tomas_the_trapper",
+        "turn_in_npc": "tomas_the_trapper",
+        "level_required": 1,
+        "recommended_level": 2,
+        "prerequisites": [],
+        "objectives": [
+          {
+            "type": "collect",
+            "item_id": "pristine_wolf_pelt",
+            "count": 6,
+            "description": "Collect 6 Pristine Wolf Pelts",
+            "drop_from": ["young_wolf", "timber_wolf", "prowler"]
+          }
+        ],
+        "dialogue": {
+          "offer": "The wolves around Elwynn have the finest pelts in the kingdom - thick and lustrous. I'd harvest them myself, but my hunting days are behind me. Bring me six pristine pelts and I'll craft you something fine.",
+          "progress": "Still hunting wolves? Mind yourself - they travel in packs.",
+          "complete": "Ah, feel that quality! These will make excellent armor. Here, take this - you've earned it."
+        },
+        "rewards": {
+          "experience": 300,
+          "gold": 2,
+          "items": [],
+          "choice_items": [
+            { "item_id": "leather_tunic", "count": 1 },
+            { "item_id": "hide_leggings", "count": 1 }
+          ]
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "the_gnoll_threat",
+        "name": "The Gnoll Threat",
+        "description": "Marshal Dughan is concerned about increasing gnoll activity.",
+        "quest_giver": "marshal_dughan",
+        "turn_in_npc": "marshal_dughan",
+        "level_required": 3,
+        "recommended_level": 4,
+        "prerequisites": ["report_to_goldshire"],
+        "objectives": [
+          {
+            "type": "kill",
+            "enemy_id": "gnoll_scout",
+            "count": 8,
+            "description": "Kill 8 Riverpaw Scouts"
+          }
+        ],
+        "dialogue": {
+          "offer": "The Riverpaw gnolls have been growing bolder. They're raiding farms, ambushing travelers... it needs to stop. Head to the western fields and thin their numbers. Kill eight of their scouts - that should send a message.",
+          "progress": "The gnolls are still a threat. Have you dealt with their scouts?",
+          "complete": "Good work. That should buy our farmers some peace. But I fear this is only the beginning - reports say they're being organized by someone. Or something."
+        },
+        "rewards": {
+          "experience": 450,
+          "gold": 4,
+          "items": [{ "item_id": "militia_shortsword", "count": 1 }],
+          "choice_items": []
+        },
+        "unlocks_quests": ["hogger_bounty"]
+      },
+      {
+        "id": "defias_threat",
+        "name": "The Defias Brotherhood",
+        "description": "Guard Thomas needs help dealing with Defias bandits on the roads.",
+        "quest_giver": "guard_thomas",
+        "turn_in_npc": "guard_thomas",
+        "level_required": 2,
+        "recommended_level": 3,
+        "prerequisites": [],
+        "objectives": [
+          {
+            "type": "kill",
+            "enemy_id": "defias_thug",
+            "count": 6,
+            "description": "Kill 6 Defias Thugs"
+          },
+          {
+            "type": "collect",
+            "item_id": "red_bandana",
+            "count": 10,
+            "description": "Collect 10 Red Bandanas",
+            "drop_from": ["defias_thug", "defias_bandit", "defias_cutpurse"]
+          }
+        ],
+        "dialogue": {
+          "offer": "The Defias Brotherhood - they're thieves, murderers, the lot of them. They've been ambushing merchants on the roads, and we're spread too thin to stop them. Kill their thugs and bring me their bandanas as proof. Maybe that'll discourage the rest.",
+          "progress": "The Defias are still out there. Keep fighting.",
+          "complete": "Ten bandanas... that's ten fewer bandits on our roads. You've done good work, friend. Here's your payment."
+        },
+        "rewards": {
+          "experience": 500,
+          "gold": 5,
+          "items": [],
+          "choice_items": [
+            { "item_id": "defias_leather_vest", "count": 1 },
+            { "item_id": "militia_chain_shirt", "count": 1 }
+          ]
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "missing_miners",
+        "name": "The Missing Miners",
+        "description": "Supervisor Raelen has lost contact with miners in the depths of Fargodeep Mine.",
+        "quest_giver": "supervisor_raelen",
+        "turn_in_npc": "supervisor_raelen",
+        "level_required": 2,
+        "recommended_level": 3,
+        "prerequisites": [],
+        "objectives": [
+          {
+            "type": "collect",
+            "item_id": "miners_union_card",
+            "count": 4,
+            "description": "Find 4 Miner's Union Cards",
+            "drop_from": ["kobold_miner"]
+          }
+        ],
+        "dialogue": {
+          "offer": "Four of my miners went into the lower tunnels three days ago. They haven't come back. The kobolds have overrun that section, and I fear the worst. Please, find out what happened to them. Bring back their union cards - at least their families will have closure.",
+          "progress": "Have you found any sign of my miners?",
+          "complete": "Their cards... so they're really gone. Damn those kobolds. Thank you for bringing these back. I'll see that their families are notified. Here - it's the least I can do."
+        },
+        "rewards": {
+          "experience": 400,
+          "gold": 4,
+          "items": [{ "item_id": "minor_healing_potion", "count": 5 }],
+          "choice_items": []
+        },
+        "unlocks_quests": ["clear_the_mines"]
+      },
+      {
+        "id": "clear_the_mines",
+        "name": "Clear the Mines",
+        "description": "Supervisor Raelen wants revenge on the kobolds - and needs the mines cleared for work to resume.",
+        "quest_giver": "supervisor_raelen",
+        "turn_in_npc": "supervisor_raelen",
+        "level_required": 3,
+        "recommended_level": 4,
+        "prerequisites": ["missing_miners"],
+        "objectives": [
+          {
+            "type": "kill",
+            "enemy_id": "kobold_miner",
+            "count": 10,
+            "description": "Kill 10 Kobold Miners"
+          },
+          {
+            "type": "kill",
+            "enemy_id": "kobold_geomancer",
+            "count": 4,
+            "description": "Kill 4 Kobold Geomancers"
+          },
+          {
+            "type": "kill",
+            "enemy_id": "goldtooth",
+            "count": 1,
+            "description": "Kill Goldtooth"
+          }
+        ],
+        "dialogue": {
+          "offer": "Those kobolds murdered my workers. I want them gone - every last one. And there's one in particular, a fat one with a gold tooth. He seems to be their leader down there. Kill him, and maybe the rest will scatter.",
+          "progress": "Are the mines clear yet? I need to get production started again.",
+          "complete": "Goldtooth is dead? The mines are clear? Finally, some good news. You've saved this operation - and avenged my workers. Take this with my gratitude."
+        },
+        "rewards": {
+          "experience": 750,
+          "gold": 8,
+          "items": [],
+          "choice_items": [
+            { "item_id": "kobold_mining_pick", "count": 1 },
+            { "item_id": "kobold_skull_cap", "count": 1 },
+            { "item_id": "silver_ring", "count": 1 }
+          ]
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "murloc_menace",
+        "name": "Murloc Menace",
+        "description": "Deputy Feldon needs help dealing with aggressive murlocs near the logging camp.",
+        "quest_giver": "deputy_feldon",
+        "turn_in_npc": "deputy_feldon",
+        "level_required": 3,
+        "recommended_level": 4,
+        "prerequisites": [],
+        "objectives": [
+          {
+            "type": "kill",
+            "enemy_id": "murloc_forager",
+            "count": 6,
+            "description": "Kill 6 Murloc Foragers"
+          },
+          {
+            "type": "kill",
+            "enemy_id": "murloc_warrior",
+            "count": 4,
+            "description": "Kill 4 Murloc Warriors"
+          }
+        ],
+        "dialogue": {
+          "offer": "Those damned murlocs have been attacking anyone who goes near the river. My loggers can't work, the fishermen can't fish. I need you to clear them out - kill their foragers and warriors. Maybe then we can have some peace.",
+          "progress": "Still hearing that horrible gurgling from the river. Keep at it.",
+          "complete": "The river's finally quiet. My people can get back to work. Here's your reward - you've earned it."
+        },
+        "rewards": {
+          "experience": 500,
+          "gold": 5,
+          "items": [{ "item_id": "healing_potion", "count": 2 }],
+          "choice_items": []
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "wanted_hogger",
+        "name": "Wanted: Hogger",
+        "description": "A bounty has been placed on Hogger, the notorious gnoll warlord terrorizing Elwynn Forest.",
+        "quest_giver": "wanted_poster_hogger",
+        "turn_in_npc": "marshal_dughan",
+        "level_required": 5,
+        "recommended_level": 7,
+        "prerequisites": ["the_gnoll_threat"],
+        "objectives": [
+          {
+            "type": "kill",
+            "enemy_id": "hogger",
+            "count": 1,
+            "description": "Kill Hogger"
+          },
+          {
+            "type": "collect",
+            "item_id": "hoggers_claw",
+            "count": 1,
+            "description": "Bring Hogger's Claw to Marshal Dughan",
+            "drop_from": ["hogger"]
+          }
+        ],
+        "dialogue": {
+          "offer": "WANTED: The gnoll called Hogger, for murder, banditry, and terrorizing the people of Elwynn Forest. A substantial reward is offered for proof of his demise. Report to Marshal Dughan.",
+          "progress": "Hogger still lives? He's a menace that must be stopped.",
+          "complete": "Hogger's claw... it's really over? You've done what a dozen soldiers couldn't. Elwynn Forest owes you a great debt. Take this reward - you've more than earned it."
+        },
+        "rewards": {
+          "experience": 1200,
+          "gold": 25,
+          "items": [],
+          "choice_items": [
+            { "item_id": "hoggers_sharpened_claw", "count": 1 },
+            { "item_id": "hoggers_war_harness", "count": 1 },
+            { "item_id": "gnoll_commanders_medallion", "count": 1 }
+          ]
+        },
+        "is_zone_finale": false,
+        "unlocks_quests": []
+      },
+      {
+        "id": "young_lovers",
+        "name": "Young Lovers",
+        "description": "Maybell Maclure wants you to deliver a message to her forbidden love.",
+        "quest_giver": "maybell_maclure",
+        "turn_in_npc": "maybell_maclure",
+        "level_required": 1,
+        "recommended_level": 2,
+        "prerequisites": [],
+        "objectives": [
+          {
+            "type": "delivery",
+            "target_npc": "tommy_joe_stonefield",
+            "description": "Deliver Maybell's letter to Tommy Joe Stonefield",
+            "item_id": "maybells_letter"
+          },
+          {
+            "type": "delivery",
+            "target_npc": "maybell_maclure",
+            "description": "Return to Maybell with Tommy Joe's response",
+            "item_id": "tommy_joes_response"
+          }
+        ],
+        "dialogue": {
+          "offer": "Please, you have to help me. Tommy Joe Stonefield and I are in love, but our families have been feuding for generations. I need someone to carry a message to him - I can't be seen anywhere near Stonefield Farm.",
+          "progress": "Have you spoken to Tommy Joe?",
+          "complete": "He still loves me! Oh thank you, thank you! Here, take this. It's not much, but it's all I have."
+        },
+        "rewards": {
+          "experience": 200,
+          "gold": 1,
+          "items": [{ "item_id": "bread", "count": 5 }],
+          "choice_items": []
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "pie_for_billy",
+        "name": "Pie for Billy",
+        "description": "Gramma Stonefield wants you to deliver a pie to her grandson.",
+        "quest_giver": "gramma_stonefield",
+        "turn_in_npc": "billy_stonefield",
+        "level_required": 1,
+        "recommended_level": 1,
+        "prerequisites": [],
+        "objectives": [
+          {
+            "type": "delivery",
+            "target_npc": "billy_stonefield",
+            "description": "Deliver the pie to Billy Stonefield",
+            "item_id": "grammas_pie"
+          }
+        ],
+        "dialogue": {
+          "offer": "My grandson Billy is out watching the pumpkin fields. The poor dear's been out there all day without a bite to eat. Would you be a sweetheart and bring him this pie? I'd go myself, but these old legs...",
+          "progress": "Has Billy gotten his pie yet?",
+          "complete": "Gramma sent pie? You're my new best friend! Here, she always gives me too much coin for chores. Take some."
+        },
+        "rewards": {
+          "experience": 100,
+          "gold": 1,
+          "items": [{ "item_id": "roasted_boar_meat", "count": 3 }],
+          "choice_items": []
+        },
+        "unlocks_quests": []
+      }
+    ],
+    "westfall": [
+      {
+        "id": "peoples_militia_i",
+        "name": "The People's Militia (I)",
+        "description": "Gryan Stoutmantle wants you to thin the Defias ranks threatening Sentinel Hill.",
+        "quest_giver": "gryan_stoutmantle",
+        "turn_in_npc": "gryan_stoutmantle",
+        "level_required": 10,
+        "recommended_level": 11,
+        "prerequisites": [],
+        "objectives": [
+          { "type": "kill", "enemy_id": "defias_bandit", "count": 10, "description": "Defeat 10 Defias Bandits" },
+          { "type": "kill", "enemy_id": "defias_trapper", "count": 8, "description": "Defeat 8 Defias Trappers" }
+        ],
+        "dialogue": {
+          "offer": "The Defias Brotherhood tightens its grip on Westfall. We need to hit them where it hurts. Start with the bandits and trappers prowling the fields.",
+          "progress": "The Defias still stalk the roads. Keep the pressure on.",
+          "complete": "Good work. That should slow their raids and give our people some breathing room."
+        },
+        "rewards": {
+          "experience": 900,
+          "gold": 8,
+          "items": [{ "item_id": "minor_healing_potion", "count": 3 }],
+          "choice_items": [
+            { "item_id": "defias_leather_vest", "count": 1 },
+            { "item_id": "militia_chain_shirt", "count": 1 }
+          ]
+        },
+        "unlocks_quests": ["peoples_militia_ii"]
+      },
+      {
+        "id": "peoples_militia_ii",
+        "name": "The People's Militia (II)",
+        "description": "Gryan Stoutmantle wants you to take the fight to the Defias highwaymen and sappers.",
+        "quest_giver": "gryan_stoutmantle",
+        "turn_in_npc": "gryan_stoutmantle",
+        "level_required": 12,
+        "recommended_level": 14,
+        "prerequisites": ["peoples_militia_i"],
+        "objectives": [
+          { "type": "kill", "enemy_id": "defias_highwayman", "count": 8, "description": "Defeat 8 Defias Highwaymen" },
+          { "type": "kill", "enemy_id": "defias_sapper", "count": 6, "description": "Defeat 6 Defias Sappers" }
+        ],
+        "dialogue": {
+          "offer": "With their scouts scattered, it's time to cut down the brigands on the roads and the sappers fueling their explosives.",
+          "progress": "Until the roads are safe, Westfall can't recover.",
+          "complete": "Excellent. Travelers will breathe easier, for a time. But the Defias still have leaders that need dealing with."
+        },
+        "rewards": {
+          "experience": 1400,
+          "gold": 12,
+          "items": [],
+          "choice_items": [
+            { "item_id": "forest_tracker_bow", "count": 1 },
+            { "item_id": "gnarled_oak_staff", "count": 1 },
+            { "item_id": "militia_shortsword", "count": 1 }
+          ]
+        },
+        "unlocks_quests": ["peoples_militia_finale"]
+      },
+      {
+        "id": "peoples_militia_finale",
+        "name": "The People's Militia (Finale)",
+        "description": "Eliminate the Defias leadership in Jangolode Mine and bring proof.",
+        "quest_giver": "gryan_stoutmantle",
+        "turn_in_npc": "gryan_stoutmantle",
+        "level_required": 15,
+        "recommended_level": 17,
+        "prerequisites": ["peoples_militia_ii"],
+        "objectives": [
+          { "type": "kill", "enemy_id": "defias_overseer", "count": 1, "description": "Slay the Defias Overseer" },
+          { "type": "collect", "item_id": "defias_signet", "count": 1, "description": "Bring back a Defias Signet", "drop_from": ["defias_overseer"] }
+        ],
+        "dialogue": {
+          "offer": "Their overseer runs Jangolode Mine and funnels gold to the Brotherhood. Kill him and bring me his signet.",
+          "progress": "The mine still sends smoke into the sky. Has the overseer fallen?",
+          "complete": "This signet will send a message: Westfall fights back. Well done."
+        },
+        "rewards": {
+          "experience": 2000,
+          "gold": 20,
+          "items": [],
+          "choice_items": [
+            { "item_id": "defias_cutlass", "count": 1 },
+            { "item_id": "defias_leather_vest", "count": 1 },
+            { "item_id": "forest_tracker_bow", "count": 1 }
+          ]
+        },
+        "is_zone_finale": true,
+        "unlocks_quests": []
+      },
+      {
+        "id": "harvest_disruption",
+        "name": "Harvest Disruption",
+        "description": "Farmer Saldean wants the rogue harvest golems disabled so his fields can be reclaimed.",
+        "quest_giver": "farmer_saldean",
+        "turn_in_npc": "farmer_saldean",
+        "level_required": 11,
+        "recommended_level": 12,
+        "prerequisites": [],
+        "objectives": [
+          { "type": "kill", "enemy_id": "harvest_watcher", "count": 6, "description": "Destroy 6 Harvest Watchers" },
+          { "type": "kill", "enemy_id": "harvest_sentry", "count": 4, "description": "Destroy 4 Harvest Sentries" }
+        ],
+        "dialogue": {
+          "offer": "Those infernal machines tore up our fields and scared the hands off. Disable them so we can work our land again.",
+          "progress": "The sentries still grind through our crops. Any luck stopping them?",
+          "complete": "That's a relief. Maybe we can plant again without losing more good folk."
+        },
+        "rewards": {
+          "experience": 1000,
+          "gold": 9,
+          "items": [
+            { "item_id": "bread", "count": 10 },
+            { "item_id": "minor_healing_potion", "count": 3 }
+          ],
+          "choice_items": []
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "coastal_threat",
+        "name": "Coastal Threat",
+        "description": "Lightkeeper Grayson needs the murlocs along the Longshore culled before they threaten the lighthouse.",
+        "quest_giver": "lightkeeper_grayson",
+        "turn_in_npc": "lightkeeper_grayson",
+        "level_required": 10,
+        "recommended_level": 11,
+        "prerequisites": [],
+        "objectives": [
+          { "type": "kill", "enemy_id": "murloc_forager", "count": 8, "description": "Kill 8 Murloc Foragers" },
+          { "type": "kill", "enemy_id": "murloc_warrior", "count": 6, "description": "Kill 6 Murloc Warriors" }
+        ],
+        "dialogue": {
+          "offer": "Murlocs have crept closer each night. Push them back or the light may go dark.",
+          "progress": "Still hearing those wretched gurgles. Keep at it.",
+          "complete": "Quiet seas again. Thank you — ships will see the light because of you."
+        },
+        "rewards": {
+          "experience": 850,
+          "gold": 7,
+          "items": [
+            { "item_id": "bandage", "count": 5 },
+            { "item_id": "minor_healing_potion", "count": 2 }
+          ],
+          "choice_items": []
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "furlbrows_plight",
+        "name": "Furlbrow's Plight",
+        "description": "Verna Furlbrow wants you to drive off the Defias harassing her homestead.",
+        "quest_giver": "verna_furlbrow",
+        "turn_in_npc": "verna_furlbrow",
+        "level_required": 10,
+        "recommended_level": 11,
+        "prerequisites": [],
+        "objectives": [
+          { "type": "kill", "enemy_id": "defias_highwayman", "count": 6, "description": "Kill 6 Defias Highwaymen" },
+          { "type": "collect", "item_id": "small_pouch_of_coins", "count": 5, "description": "Collect 5 Small Pouches of Coins", "drop_from": ["defias_highwayman", "defias_trapper"] }
+        ],
+        "dialogue": {
+          "offer": "Those bandits keep coming around to squeeze us for coin. Put some of them in the dirt and take back what they stole.",
+          "progress": "Still see their red bandanas on the road. Keep at it.",
+          "complete": "Maybe now we can breathe for a bit. Here, take this — it's what we could spare."
+        },
+        "rewards": {
+          "experience": 900,
+          "gold": 10,
+          "items": [
+            { "item_id": "bread", "count": 8 },
+            { "item_id": "minor_healing_potion", "count": 2 }
+          ],
+          "choice_items": []
+        },
+        "unlocks_quests": []
+      },
+      {
+        "id": "clearing_the_deadmines",
+        "name": "Clearing the Deadmines",
+        "description": "Gryan Stoutmantle wants you to eliminate Edwin VanCleef and seize his orders.",
+        "quest_giver": "gryan_stoutmantle",
+        "turn_in_npc": "gryan_stoutmantle",
+        "level_required": 16,
+        "recommended_level": 18,
+        "prerequisites": ["peoples_militia_finale"],
+        "objectives": [
+          { "type": "kill", "enemy_id": "edwin_vancleef", "count": 1, "description": "Slay Edwin VanCleef" },
+          { "type": "collect", "item_id": "defias_orders", "count": 1, "description": "Bring back VanCleef's Orders", "drop_from": ["edwin_vancleef"] }
+        ],
+        "dialogue": {
+          "offer": "We broke their surface operations, but their leader still commands from the Deadmines. End VanCleef and bring me his orders.",
+          "progress": "Until VanCleef is gone, Westfall isn't safe.",
+          "complete": "VanCleef is dead and his orders are ours. Westfall has hope again thanks to you."
+        },
+        "rewards": {
+          "experience": 2600,
+          "gold": 30,
+          "items": [],
+          "choice_items": [
+            { "item_id": "defias_cutlass", "count": 1 },
+            { "item_id": "defias_leather_vest", "count": 1 },
+            { "item_id": "forest_tracker_bow", "count": 1 }
+          ]
+        },
+        "is_zone_finale": true,
+        "unlocks_quests": []
+      }
+    ]
+  }
+}

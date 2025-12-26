@@ -1,0 +1,94 @@
+{
+  "balance": {
+    "experience": {
+      "xp_curve": [
+        { "level": 1, "xp_to_next": 200 },
+        { "level": 2, "xp_to_next": 450 },
+        { "level": 3, "xp_to_next": 800 },
+        { "level": 4, "xp_to_next": 1300 },
+        { "level": 5, "xp_to_next": 1900 },
+        { "level": 6, "xp_to_next": 2600 },
+        { "level": 7, "xp_to_next": 3400 },
+        { "level": 8, "xp_to_next": 4300 },
+        { "level": 9, "xp_to_next": 5300 },
+        { "level": 10, "xp_to_next": 6400 },
+        { "level": 11, "xp_to_next": 7600 },
+        { "level": 12, "xp_to_next": 8900 },
+        { "level": 13, "xp_to_next": 10300 },
+        { "level": 14, "xp_to_next": 11800 },
+        { "level": 15, "xp_to_next": 13400 },
+        { "level": 16, "xp_to_next": 15100 },
+        { "level": 17, "xp_to_next": 16900 },
+        { "level": 18, "xp_to_next": 18800 },
+        { "level": 19, "xp_to_next": 20800 },
+        { "level": 20, "xp_to_next": 22900 }
+      ],
+      "kill_xp_scaling": {
+        "same_level_multiplier": 1.0,
+        "per_level_above": 0.1,
+        "per_level_below": -0.1,
+        "minimum_multiplier": 0.25,
+        "maximum_multiplier": 1.5
+      },
+      "quest_xp_multiplier": 1.0
+    },
+    "combat": {
+      "base_hit_chance": 0.9,
+      "crit_chance": 0.05,
+      "crit_multiplier": 1.5,
+      "damage_variance": { "min": 0.85, "max": 1.15 },
+      "armor": {
+        "reduction_per_point": 0.01,
+        "minimum_multiplier": 0.2,
+        "maximum_multiplier": 0.8
+      },
+      "dodge": { "base_chance": 0.03, "per_agility": 0.001 },
+      "parry": { "base_chance": 0.02, "per_strength": 0.0005 },
+      "block": { "base_chance": 0.05, "damage_reduction": 0.3 },
+      "status_effects": {
+        "bleed_damage_per_turn_multiplier": 1.0,
+        "dot_minimum_duration": 2
+      }
+    },
+    "regeneration": {
+      "health": {
+        "in_combat_percent_per_turn": 0.01,
+        "out_of_combat_percent_per_turn": 0.05
+      },
+      "mana": {
+        "in_combat_percent_per_turn": 0.02,
+        "out_of_combat_percent_per_turn": 0.1
+      },
+      "energy": { "per_turn": 20, "out_of_combat_bonus": 20 },
+      "rage": { "on_damage_dealt": 5, "on_damage_taken": 3, "out_of_combat_decay": 0 },
+      "focus": { "per_turn": 10, "out_of_combat_bonus": 30 }
+    },
+    "encounters": {
+      "base_random_encounter_chance": 0.2,
+      "encounter_check_interval_steps": 1,
+      "flee_success_base": 0.65,
+      "flee_success_penalty_per_enemy_level": 0.05
+    },
+    "loot": {
+      "rarity_weights": {
+        "poor": 0.6,
+        "common": 0.3,
+        "uncommon": 0.09,
+        "rare": 0.01,
+        "epic": 0.0
+      },
+      "rarity_bonus_per_level": 0.002,
+      "gold_drop_multiplier": 1.0,
+      "vendor": {
+        "buy_modifier": 0.5,
+        "sell_modifier": 1.0,
+        "repair_cost_per_durability": 0.1
+      }
+    },
+    "economy": {
+      "sell_value_floor": 1,
+      "quest_reward_multiplier": 1.0,
+      "training_costs": { "base": 5, "per_level": 2 }
+    }
+  }
+}

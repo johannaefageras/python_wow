@@ -1,0 +1,119 @@
+{
+  "races": [
+    {
+      "id": "human",
+      "name": "Human",
+      "description": "Resilient and adaptable, humans are known for their tenacity and diplomatic nature. They form the backbone of the Alliance and thrive in all walks of life.",
+      "stat_modifiers": {
+        "experience_bonus": 0.05
+      },
+      "starting_zone": "elwynn_forest",
+      "racial_ability": null
+    },
+    {
+      "id": "dwarf",
+      "name": "Dwarf",
+      "description": "Stout and sturdy, dwarves hail from the mountains of Khaz Modan. Their legendary resilience makes them formidable warriors and survivors.",
+      "stat_modifiers": {
+        "max_health_bonus": 10
+      },
+      "starting_zone": "elwynn_forest",
+      "racial_ability": {
+        "id": "stoneform",
+        "name": "Stoneform",
+        "description": "Turn to stone, removing all poison and bleed effects and reducing damage taken by 10% for 2 turns.",
+        "cooldown": 10
+      }
+    },
+    {
+      "id": "night_elf",
+      "name": "Night Elf",
+      "description": "Ancient and graceful, night elves have lived for thousands of years in the forests of Kalimdor. Their agility and connection to nature make them elusive opponents.",
+      "stat_modifiers": {
+        "dodge_chance": 0.02
+      },
+      "starting_zone": "elwynn_forest",
+      "racial_ability": {
+        "id": "shadowmeld",
+        "name": "Shadowmeld",
+        "description": "Slip into the shadows, gaining a chance to avoid the next enemy attack entirely.",
+        "cooldown": 8
+      }
+    },
+    {
+      "id": "gnome",
+      "name": "Gnome",
+      "description": "Brilliant and eccentric, gnomes possess an insatiable curiosity and a knack for engineering. What they lack in size, they make up for in intellect.",
+      "stat_modifiers": {
+        "max_mana_bonus": 15
+      },
+      "starting_zone": "elwynn_forest",
+      "racial_ability": {
+        "id": "escape_artist",
+        "name": "Escape Artist",
+        "description": "Break free of any movement impairing effects and gain a small burst of energy.",
+        "cooldown": 6
+      }
+    },
+    {
+      "id": "orc",
+      "name": "Orc",
+      "description": "Fierce and honorable, orcs are mighty warriors from Draenor. Their blood runs hot with the spirit of battle, driving them to feats of savage strength.",
+      "stat_modifiers": {
+        "damage_bonus": 0.03
+      },
+      "starting_zone": "elwynn_forest",
+      "racial_ability": {
+        "id": "blood_fury",
+        "name": "Blood Fury",
+        "description": "Unleash your inner rage, increasing damage dealt by 15% for 3 turns.",
+        "cooldown": 10
+      }
+    },
+    {
+      "id": "undead",
+      "name": "Undead",
+      "description": "Freed from the Lich King's control, the Forsaken are undead humans who seek their own destiny. Their cursed existence grants them unnatural resilience.",
+      "stat_modifiers": {
+        "shadow_resistance": 0.1
+      },
+      "starting_zone": "elwynn_forest",
+      "racial_ability": {
+        "id": "will_of_the_forsaken",
+        "name": "Will of the Forsaken",
+        "description": "Break free of any fear, sleep, or charm effects through sheer force of will.",
+        "cooldown": 8
+      }
+    },
+    {
+      "id": "tauren",
+      "name": "Tauren",
+      "description": "Noble and peaceful, the tauren are a proud race of nomadic hunters. Their immense size and strength make them natural protectors of the land.",
+      "stat_modifiers": {
+        "max_health_bonus": 15
+      },
+      "starting_zone": "elwynn_forest",
+      "racial_ability": {
+        "id": "war_stomp",
+        "name": "War Stomp",
+        "description": "Stomp the ground, stunning all enemies for 1 turn.",
+        "cooldown": 10
+      }
+    },
+    {
+      "id": "troll",
+      "name": "Troll",
+      "description": "Cunning and spiritual, jungle trolls are renowned for their regenerative abilities and connection to ancient voodoo magic.",
+      "stat_modifiers": {
+        "health_regen_bonus": 1
+      },
+      "starting_zone": "elwynn_forest",
+      "racial_ability": {
+        "id": "berserking",
+        "name": "Berserking",
+        "description": "Enter a berserker rage, increasing attack speed and gaining an extra action for 2 turns.",
+        "cooldown": 12
+      }
+    }
+  ]
+}

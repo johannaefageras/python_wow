@@ -1,0 +1,465 @@
+{
+  "npcs": {
+    "elwynn_forest": [
+      {
+        "id": "marshal_dughan",
+        "name": "Marshal Dughan",
+        "title": "Marshal of Goldshire",
+        "description": "A grizzled veteran in polished armor. He carries the weight of Elwynn's safety on his shoulders.",
+        "location": "goldshire",
+        "role": ["quest_giver"],
+        "quests_offered": ["report_to_goldshire", "wanted_hogger", "the_gnoll_threat"],
+        "dialogue": {
+          "greeting": "Well met, traveler. Goldshire could use someone with your spirit. These are troubled times.",
+          "quest_available": "I have work for you, if you're willing.",
+          "quest_complete": "You've done Elwynn a great service. The people here won't forget it.",
+          "idle": "Stay vigilant. The forest isn't as safe as it once was."
+        }
+      },
+      {
+        "id": "william_pestle",
+        "name": "William Pestle",
+        "title": "Alchemist",
+        "description": "A thin man with stained fingers and the smell of herbs about him.",
+        "location": "goldshire",
+        "role": ["vendor", "quest_giver"],
+        "quests_offered": ["kobold_candles", "gold_dust_exchange"],
+        "vendor_inventory": [
+          { "item_id": "minor_healing_potion", "stock": 10 },
+          { "item_id": "minor_mana_potion", "stock": 10 },
+          { "item_id": "healing_potion", "stock": 5 },
+          { "item_id": "mana_potion", "stock": 5 },
+          { "item_id": "antidote", "stock": 5 },
+          { "item_id": "elixir_of_minor_fortitude", "stock": 3 },
+          { "item_id": "elixir_of_lion_strength", "stock": 3 }
+        ],
+        "dialogue": {
+          "greeting": "Potions, elixirs, all manner of alchemical goods! What can I mix for you?",
+          "shop": "Take a look at my wares. Everything's freshly brewed.",
+          "quest_available": "Say, you look capable. I could use some help gathering ingredients.",
+          "quest_complete": "Excellent! These will do nicely.",
+          "idle": "The kobolds in the mines have the most curious candles..."
+        }
+      },
+      {
+        "id": "innkeeper_farley",
+        "name": "Innkeeper Farley",
+        "title": "Innkeeper",
+        "description": "A portly, jovial man who runs the Lion's Pride Inn.",
+        "location": "goldshire",
+        "role": ["vendor", "innkeeper"],
+        "services": ["rest", "bind_hearthstone"],
+        "vendor_inventory": [
+          { "item_id": "bread", "stock": 20 },
+          { "item_id": "roasted_boar_meat", "stock": 10 },
+          { "item_id": "refreshing_spring_water", "stock": 20 },
+          { "item_id": "moonberry_juice", "stock": 10 }
+        ],
+        "dialogue": {
+          "greeting": "Welcome to the Lion's Pride Inn! Best ale in Elwynn, I guarantee it.",
+          "shop": "Hungry? Thirsty? I've got just the thing.",
+          "rest": "Need a rest? There's a bed upstairs with your name on it.",
+          "idle": "Business has been slow with all the trouble in the forest lately."
+        }
+      },
+      {
+        "id": "smith_argus",
+        "name": "Smith Argus",
+        "title": "Blacksmith",
+        "description": "A burly man with soot-covered arms, working the forge.",
+        "location": "goldshire",
+        "role": ["vendor", "repair"],
+        "services": ["repair"],
+        "vendor_inventory": [
+          { "item_id": "militia_shortsword", "stock": 3 },
+          { "item_id": "militia_shield", "stock": 3 },
+          { "item_id": "militia_chain_shirt", "stock": 2 },
+          { "item_id": "militia_boots", "stock": 3 },
+          { "item_id": "sharp_dagger", "stock": 2 },
+          { "item_id": "sturdy_longbow", "stock": 2 }
+        ],
+        "dialogue": {
+          "greeting": "Need something forged or mended? You've come to the right place.",
+          "shop": "Good steel, fair prices. Take your pick.",
+          "repair": "Let me take a look at that gear. I'll have it good as new.",
+          "idle": "The Defias have been stealing shipments of ore. Makes my job harder."
+        }
+      },
+      {
+        "id": "eldrin_the_wise",
+        "name": "Eldrin",
+        "title": "Mage Trainer",
+        "description": "An elderly man in blue robes, eyes twinkling with arcane knowledge.",
+        "location": "goldshire",
+        "role": ["trainer"],
+        "trains_class": "mage",
+        "dialogue": {
+          "greeting": "Ah, a student of the arcane! The mysteries of magic await those with patience.",
+          "train": "Focus your mind. Let the arcane flow through you.",
+          "wrong_class": "The arcane arts require a certain... disposition. Perhaps another trainer would suit you better.",
+          "idle": "Magic is not a tool. It is a conversation with the universe itself."
+        }
+      },
+      {
+        "id": "brother_wilhelm",
+        "name": "Brother Wilhelm",
+        "title": "Priest Trainer",
+        "description": "A serene man in white robes, radiating calm.",
+        "location": "goldshire",
+        "role": ["trainer"],
+        "trains_class": "priest",
+        "dialogue": {
+          "greeting": "The Light welcomes all who seek its guidance.",
+          "train": "Open your heart to the Light, and it shall grant you its power.",
+          "wrong_class": "The path of the Light is not for everyone. Seek your calling elsewhere.",
+          "idle": "In these dark times, the Light is needed more than ever."
+        }
+      },
+      {
+        "id": "sergeant_brashclaw",
+        "name": "Sergeant Brashclaw",
+        "title": "Warrior Trainer",
+        "description": "A scarred dwarf with arms like tree trunks.",
+        "location": "goldshire",
+        "role": ["trainer"],
+        "trains_class": "warrior",
+        "dialogue": {
+          "greeting": "You want to learn to fight? Good. Step into the ring.",
+          "train": "Strength alone isn't enough. You need technique, discipline, rage.",
+          "wrong_class": "Bah! You don't have the build for it. Try something else.",
+          "idle": "I've killed more gnolls than you've had hot meals."
+        }
+      },
+      {
+        "id": "shadowblade_mirena",
+        "name": "Mirena",
+        "title": "Rogue Trainer",
+        "description": "A hooded woman leaning against the wall, watching everything.",
+        "location": "goldshire",
+        "role": ["trainer"],
+        "trains_class": "rogue",
+        "dialogue": {
+          "greeting": "You move quietly. Good. That will keep you alive.",
+          "train": "The shadows are your ally. Learn to use them.",
+          "wrong_class": "Subtlety isn't your strong suit. Find another path.",
+          "idle": "I could have picked your pocket three times by now."
+        }
+      },
+      {
+        "id": "huntsman_gregor",
+        "name": "Huntsman Gregor",
+        "title": "Hunter Trainer",
+        "description": "A weathered man with a longbow across his back and a hawk on his shoulder.",
+        "location": "goldshire",
+        "role": ["trainer"],
+        "trains_class": "hunter",
+        "dialogue": {
+          "greeting": "The forest speaks to those who listen. Are you ready to hear it?",
+          "train": "Patience. Precision. The prey won't wait for you to be ready.",
+          "wrong_class": "Hunting requires a connection to the wild you don't have. Try another path.",
+          "idle": "The wolves have been more aggressive lately. Something's stirring them up."
+        }
+      },
+      {
+        "id": "tomas_the_trapper",
+        "name": "Tomas",
+        "title": "Leatherworker",
+        "description": "A lean man surrounded by pelts and hides.",
+        "location": "goldshire",
+        "role": ["vendor", "quest_giver"],
+        "quests_offered": ["wolf_pelts"],
+        "vendor_inventory": [
+          { "item_id": "leather_tunic", "stock": 3 },
+          { "item_id": "hide_leggings", "stock": 3 },
+          { "item_id": "bandage", "stock": 20 }
+        ],
+        "dialogue": {
+          "greeting": "Pelts, leather, all manner of hides. Need something crafted?",
+          "shop": "Good leather lasts a lifetime if you treat it right.",
+          "quest_available": "The wolves around here have fine pelts. Bring me some and I'll make it worth your while.",
+          "quest_complete": "Fine quality! These will make excellent armor.",
+          "idle": "Used to be easier to hunt. Now you have to watch for gnolls too."
+        }
+      },
+      {
+        "id": "remy_two_times",
+        "name": "Remy 'Two-Times'",
+        "title": "Shady Dealer",
+        "description": "A nervous-looking man who keeps glancing over his shoulder.",
+        "location": "goldshire",
+        "role": ["vendor"],
+        "vendor_inventory": [
+          { "item_id": "scroll_of_protection", "stock": 5 },
+          { "item_id": "antidote", "stock": 10 },
+          { "item_id": "sharp_dagger", "stock": 1 },
+          { "item_id": "small_pouch_of_coins", "stock": 3 }
+        ],
+        "dialogue": {
+          "greeting": "Psst. Hey. You look like someone who appreciates... discretion.",
+          "shop": "I've got things, things you won't find elsewhere, if you know what I mean.",
+          "idle": "You didn't see me here, right? Right."
+        }
+      },
+      {
+        "id": "guard_thomas",
+        "name": "Guard Thomas",
+        "title": "Stormwind Guard",
+        "description": "A young guard trying to look more confident than he feels.",
+        "location": "elwynn_crossroads",
+        "role": ["quest_giver"],
+        "quests_offered": ["defias_threat"],
+        "dialogue": {
+          "greeting": "Halt! Oh, you're not a bandit. Sorry, can't be too careful these days.",
+          "quest_available": "The Defias have been ambushing travelers. We need help dealing with them.",
+          "quest_complete": "The roads should be safer now. You have my thanks.",
+          "idle": "I signed up to guard the city, not chase bandits through the woods."
+        }
+      },
+      {
+        "id": "maybell_maclure",
+        "name": "Maybell Maclure",
+        "title": "Farmer's Daughter",
+        "description": "A young woman with dirt on her hands and worry in her eyes.",
+        "location": "maclure_vineyards",
+        "role": ["quest_giver"],
+        "quests_offered": ["young_lovers"],
+        "dialogue": {
+          "greeting": "Oh! You startled me. Please, I need help...",
+          "quest_available": "Tommy Joe Stonefield and I... our families don't get along, but we're in love. Could you deliver a message for me?",
+          "quest_complete": "Thank you so much! You've given us hope.",
+          "idle": "I dream of a day when our families can put aside their differences."
+        }
+      },
+      {
+        "id": "gramma_stonefield",
+        "name": "Gramma Stonefield",
+        "title": "Stonefield Matriarch",
+        "description": "An elderly woman with kind eyes and flour-dusted apron.",
+        "location": "stonefield_farm",
+        "role": ["quest_giver"],
+        "quests_offered": ["pie_for_billy"],
+        "dialogue": {
+          "greeting": "Well hello there, dearie! You look like you could use a good meal.",
+          "quest_available": "My grandson Billy is out watching the fields. Would you be a dear and bring him some pie?",
+          "quest_complete": "Bless your heart! Here's a little something for your trouble.",
+          "idle": "The gnolls have been getting closer to the farm. Worries me something fierce."
+        }
+      },
+      {
+        "id": "supervisor_raelen",
+        "name": "Supervisor Raelen",
+        "title": "Mine Supervisor",
+        "description": "A tired-looking woman with a clipboard and a permanent frown.",
+        "location": "fargodeep_mine_entrance",
+        "role": ["quest_giver"],
+        "quests_offered": ["missing_miners", "clear_the_mines"],
+        "dialogue": {
+          "greeting": "Another adventurer? Maybe you can actually help, unlike the last dozen.",
+          "quest_available": "The kobolds have overrun the lower tunnels. My miners are trapped or worse.",
+          "quest_complete": "You actually did it. I'm... impressed. And grateful.",
+          "idle": "Production is behind schedule. The bosses in Stormwind won't be happy."
+        }
+      },
+      {
+        "id": "wanted_poster_hogger",
+        "name": "Wanted Poster",
+        "title": "",
+        "description": "A weathered poster bearing the crude likeness of a gnoll. 'WANTED: HOGGER - DEAD OR ALIVE - REWARD'",
+        "location": "goldshire",
+        "role": ["quest_giver"],
+        "quests_offered": ["wanted_hogger"],
+        "dialogue": {
+          "examine": "The poster reads: 'WANTED: The gnoll called Hogger, for murder, banditry, and terrorizing the good people of Elwynn Forest. A substantial reward is offered for proof of his demise. Report to Marshal Dughan in Goldshire.'"
+        }
+      },
+      {
+        "id": "sara_timberlain",
+        "name": "Sara Timberlain",
+        "title": "Seamstress",
+        "description": "A woman working at a loom, surrounded by bolts of cloth.",
+        "location": "goldshire",
+        "role": ["vendor"],
+        "vendor_inventory": [
+          { "item_id": "threadbare_shirt", "stock": 5 },
+          { "item_id": "ragged_pants", "stock": 5 },
+          { "item_id": "quilted_robe", "stock": 2 },
+          { "item_id": "cloth_gloves", "stock": 3 }
+        ],
+        "dialogue": {
+          "greeting": "Looking for something to wear? I've got practical clothes for practical folk.",
+          "shop": "Not the fanciest garments, but they'll keep you decent.",
+          "idle": "I could make finer things if linen wasn't so hard to come by."
+        }
+      },
+      {
+        "id": "deputy_feldon",
+        "name": "Deputy Feldon",
+        "title": "Deputy",
+        "description": "A stern-faced man with a badge on his chest.",
+        "location": "eastvale_logging_camp",
+        "role": ["quest_giver"],
+        "quests_offered": ["murloc_menace"],
+        "dialogue": {
+          "greeting": "You here to help or just passing through?",
+          "quest_available": "The murlocs down by the river have been attacking our loggers. We need someone to thin their numbers.",
+          "quest_complete": "Good work. The river should be safer for our people now.",
+          "idle": "Between the murlocs and the gnolls, it's a wonder anyone works out here."
+        }
+      },
+      {
+        "id": "quartermaster_lewis",
+        "name": "Quartermaster Lewis",
+        "title": "Quartermaster",
+        "description": "An organized man surrounded by crates and ledgers.",
+        "location": "eastvale_logging_camp",
+        "role": ["vendor", "repair"],
+        "services": ["repair"],
+        "vendor_inventory": [
+          { "item_id": "minor_healing_potion", "stock": 10 },
+          { "item_id": "bread", "stock": 20 },
+          { "item_id": "refreshing_spring_water", "stock": 20 },
+          { "item_id": "bandage", "stock": 20 },
+          { "item_id": "militia_shortsword", "stock": 2 },
+          { "item_id": "sturdy_longbow", "stock": 2 }
+        ],
+        "dialogue": {
+          "greeting": "Need supplies? I keep this camp running.",
+          "shop": "Everything's accounted for. Take what you need, pay what you owe.",
+          "repair": "Let me see what you've got. I can patch most things.",
+          "idle": "Shipments from Stormwind have been delayed. Defias, probably."
+        }
+      }
+    ],
+    "westfall": [
+      {
+        "id": "gryan_stoutmantle",
+        "name": "Gryan Stoutmantle",
+        "title": "Commander of the People's Militia",
+        "description": "A steadfast veteran determined to reclaim Westfall from the Defias.",
+        "location": "sentinel_hill",
+        "role": ["quest_giver"],
+        "quests_offered": ["peoples_militia_i", "peoples_militia_ii", "peoples_militia_finale", "clearing_the_deadmines"],
+        "dialogue": {
+          "greeting": "Welcome to Sentinel Hill. The people of Westfall need every able arm.",
+          "quest_available": "If you're here to fight the Defias, I've got work for you.",
+          "quest_complete": "Another step toward a free Westfall. Well done.",
+          "idle": "Hold the line. Stormwind has not forgotten us, and neither have we."
+        }
+      },
+      {
+        "id": "innkeeper_heather",
+        "name": "Innkeeper Heather",
+        "title": "Innkeeper",
+        "description": "A warm smile despite the hardships of Westfall, Heather keeps Sentinel Hill fed and rested.",
+        "location": "sentinel_hill",
+        "role": ["vendor", "innkeeper"],
+        "vendor_inventory": [
+          { "item_id": "bread", "stock": 20 },
+          { "item_id": "roasted_boar_meat", "stock": 15 },
+          { "item_id": "refreshing_spring_water", "stock": 20 },
+          { "item_id": "minor_healing_potion", "stock": 10 },
+          { "item_id": "minor_mana_potion", "stock": 10 }
+        ],
+        "dialogue": {
+          "greeting": "Take a seat by the fire. There's stew enough for everyone.",
+          "shop": "Food, drink, and a clean bed if you can spare the coin.",
+          "idle": "Sentinel Hill stands because we look out for each other."
+        }
+      },
+      {
+        "id": "quartermaster_hudson",
+        "name": "Quartermaster Hudson",
+        "title": "Quartermaster",
+        "description": "A meticulous supplier ensuring the militia has the gear to keep fighting.",
+        "location": "sentinel_hill",
+        "role": ["vendor", "repair"],
+        "services": ["repair"],
+        "vendor_inventory": [
+          { "item_id": "bandage", "stock": 20 },
+          { "item_id": "minor_healing_potion", "stock": 10 },
+          { "item_id": "minor_mana_potion", "stock": 10 },
+          { "item_id": "militia_chain_shirt", "stock": 3 },
+          { "item_id": "hide_leggings", "stock": 3 },
+          { "item_id": "forest_tracker_bow", "stock": 2 },
+          { "item_id": "gnarled_oak_staff", "stock": 2 }
+        ],
+        "dialogue": {
+          "greeting": "Need gear? Keep it maintained and it'll keep you alive.",
+          "shop": "Everything here is accounted for. Take what you need, pay what you owe.",
+          "repair": "Let's see the damage. I can get it back in fighting shape.",
+          "idle": "The Defias bleed us dry, but we make do with what we have."
+        }
+      },
+      {
+        "id": "farmer_saldean",
+        "name": "Farmer Saldean",
+        "title": "Farmer",
+        "description": "A weathered farmer stubbornly keeping his land alive.",
+        "location": "saldeans_farm",
+        "role": ["vendor", "quest_giver"],
+        "quests_offered": ["harvest_disruption"],
+        "vendor_inventory": [
+          { "item_id": "bread", "stock": 15 },
+          { "item_id": "roasted_boar_meat", "stock": 15 },
+          { "item_id": "refreshing_spring_water", "stock": 15 }
+        ],
+        "dialogue": {
+          "greeting": "Welcome, traveler. We don't have much, but we'll share what we can.",
+          "shop": "Homegrown goods. Fresh enough, considering.",
+          "quest_available": "We could use a hand around the farm if you're willing.",
+          "quest_complete": "Thank you kindly. Every bit of help keeps us going."
+        }
+      },
+      {
+        "id": "salma_saldean",
+        "name": "Salma Saldean",
+        "title": "Homesteader",
+        "description": "Salma keeps the farm running and worries for her neighbors' safety.",
+        "location": "saldeans_farm",
+        "role": ["quest_giver"],
+        "quests_offered": [],
+        "dialogue": {
+          "greeting": "The fields are dangerous, but we won't abandon our home.",
+          "quest_available": "If you can help with the threats around here, we'd be grateful.",
+          "quest_complete": "That's a weight off my shoulders. Thank you.",
+          "idle": "We lost so much already. We can't lose Westfall too."
+        }
+      },
+      {
+        "id": "lightkeeper_grayson",
+        "name": "Lightkeeper Grayson",
+        "title": "Lightkeeper",
+        "description": "Keeper of the Westfall Lighthouse, watching the coast for ships and danger alike.",
+        "location": "westfall_lighthouse",
+        "role": ["quest_giver", "vendor"],
+        "quests_offered": ["coastal_threat"],
+        "vendor_inventory": [
+          { "item_id": "minor_healing_potion", "stock": 6 },
+          { "item_id": "bandage", "stock": 10 },
+          { "item_id": "refreshing_spring_water", "stock": 10 }
+        ],
+        "dialogue": {
+          "greeting": "The light still shines, even in dark times.",
+          "shop": "Supplies are thin, but I can spare a few essentials.",
+          "quest_available": "Those murlocs grow bolder each day. I could use a hand.",
+          "idle": "Storms come and go. Keep your bearings and you'll find your way."
+        }
+      },
+      {
+        "id": "verna_furlbrow",
+        "name": "Verna Furlbrow",
+        "title": "Homesteader",
+        "description": "One half of the Furlbrow couple trying to hold on to their land by the border.",
+        "location": "furlbrows_farm",
+        "role": ["quest_giver"],
+        "quests_offered": ["furlbrows_plight"],
+        "dialogue": {
+          "greeting": "Not much left here but pride, and even that's wearing thin.",
+          "quest_available": "If you're heading deeper into Westfall, maybe you could help us with a few troubles.",
+          "quest_complete": "Bless you. Maybe we can make it through another season.",
+          "idle": "Stormwind turned its back on us. We rely on each other now."
+        }
+      }
+    ]
+  }
+}

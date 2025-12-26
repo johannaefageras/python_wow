@@ -1,0 +1,1093 @@
+{
+  "enemies": {
+    "elwynn_forest": [
+      {
+        "id": "young_wolf",
+        "name": "Young Wolf",
+        "description": "A small wolf, not yet fully grown.",
+        "level": 1,
+        "health": 35,
+        "damage": { "min": 3, "max": 6 },
+        "armor": 0,
+        "abilities": [],
+        "loot_table": [
+          { "item_id": "wolf_fang", "drop_chance": 0.4 },
+          { "item_id": "pristine_wolf_pelt", "drop_chance": 0.15 }
+        ],
+        "experience": 25,
+        "gold": { "min": 0, "max": 1 },
+        "aggro_radius": "passive",
+        "flee_threshold": 0.1
+      },
+      {
+        "id": "timber_wolf",
+        "name": "Timber Wolf",
+        "description": "A grey wolf prowling through the forest.",
+        "level": 2,
+        "health": 50,
+        "damage": { "min": 5, "max": 9 },
+        "armor": 2,
+        "abilities": [
+          {
+            "id": "lunge",
+            "name": "Lunge",
+            "damage_multiplier": 1.5,
+            "cooldown": 3,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "wolf_fang", "drop_chance": 0.5 },
+          { "item_id": "pristine_wolf_pelt", "drop_chance": 0.25 }
+        ],
+        "experience": 40,
+        "gold": { "min": 1, "max": 2 },
+        "aggro_radius": "neutral"
+      },
+      {
+        "id": "prowler",
+        "name": "Prowler",
+        "description": "A large, scarred wolf that leads a small pack.",
+        "level": 4,
+        "health": 85,
+        "damage": { "min": 8, "max": 14 },
+        "armor": 4,
+        "abilities": [
+          {
+            "id": "lunge",
+            "name": "Lunge",
+            "damage_multiplier": 1.5,
+            "cooldown": 3,
+            "trigger_chance": 0.4
+          },
+          {
+            "id": "howl",
+            "name": "Howl",
+            "effect": { "type": "buff", "stat": "damage_bonus", "value": 0.2, "duration": 3 },
+            "cooldown": 5,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "wolf_fang", "drop_chance": 0.6 },
+          { "item_id": "pristine_wolf_pelt", "drop_chance": 0.4 },
+          { "item_id": "wolf_tooth_talisman", "drop_chance": 0.05 }
+        ],
+        "experience": 75,
+        "gold": { "min": 2, "max": 5 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "young_boar",
+        "name": "Young Boar",
+        "description": "A small wild pig rooting through the underbrush.",
+        "level": 1,
+        "health": 40,
+        "damage": { "min": 3, "max": 5 },
+        "armor": 1,
+        "abilities": [],
+        "loot_table": [
+          { "item_id": "boar_tusk", "drop_chance": 0.35 },
+          { "item_id": "roasted_boar_meat", "drop_chance": 0.2 }
+        ],
+        "experience": 25,
+        "gold": { "min": 0, "max": 1 },
+        "aggro_radius": "passive",
+        "flee_threshold": 0.15
+      },
+      {
+        "id": "forest_boar",
+        "name": "Forest Boar",
+        "description": "A tusked boar with a foul temper.",
+        "level": 2,
+        "health": 60,
+        "damage": { "min": 5, "max": 8 },
+        "armor": 3,
+        "abilities": [
+          {
+            "id": "charge",
+            "name": "Charge",
+            "damage_multiplier": 1.75,
+            "cooldown": 4,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "boar_tusk", "drop_chance": 0.5 },
+          { "item_id": "roasted_boar_meat", "drop_chance": 0.3 }
+        ],
+        "experience": 45,
+        "gold": { "min": 1, "max": 2 },
+        "aggro_radius": "neutral"
+      },
+      {
+        "id": "kobold_tunneler",
+        "name": "Kobold Tunneler",
+        "description": "A small, rat-like humanoid clutching a candle. 'You no take candle!'",
+        "level": 2,
+        "health": 45,
+        "damage": { "min": 4, "max": 8 },
+        "armor": 1,
+        "abilities": [],
+        "loot_table": [
+          { "item_id": "kobold_candle", "drop_chance": 0.35 },
+          { "item_id": "kobold_rags", "drop_chance": 0.4 },
+          { "item_id": "copper_ore", "drop_chance": 0.15 }
+        ],
+        "experience": 35,
+        "gold": { "min": 1, "max": 3 },
+        "aggro_radius": "neutral",
+        "flee_threshold": 0.2
+      },
+      {
+        "id": "kobold_miner",
+        "name": "Kobold Miner",
+        "description": "A kobold carrying a pickaxe almost as big as itself.",
+        "level": 3,
+        "health": 65,
+        "damage": { "min": 6, "max": 11 },
+        "armor": 2,
+        "abilities": [
+          {
+            "id": "pickaxe_swing",
+            "name": "Pickaxe Swing",
+            "damage_multiplier": 1.4,
+            "cooldown": 3,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "kobold_candle", "drop_chance": 0.4 },
+          { "item_id": "copper_ore", "drop_chance": 0.25 },
+          { "item_id": "kobold_mining_pick", "drop_chance": 0.08 },
+          { "item_id": "miners_union_card", "drop_chance": 0.1 }
+        ],
+        "experience": 55,
+        "gold": { "min": 2, "max": 4 },
+        "aggro_radius": "aggressive",
+        "flee_threshold": 0.15
+      },
+      {
+        "id": "kobold_geomancer",
+        "name": "Kobold Geomancer",
+        "description": "A kobold shaman who has learned to harness earth magic.",
+        "level": 4,
+        "health": 55,
+        "damage": { "min": 8, "max": 13 },
+        "armor": 1,
+        "abilities": [
+          {
+            "id": "earth_bolt",
+            "name": "Earth Bolt",
+            "damage_multiplier": 1.6,
+            "cooldown": 2,
+            "trigger_chance": 0.5
+          },
+          {
+            "id": "stoneskin",
+            "name": "Stoneskin",
+            "effect": { "type": "buff", "stat": "armor", "value": 5, "duration": 3 },
+            "cooldown": 5,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "kobold_candle", "drop_chance": 0.45 },
+          { "item_id": "gold_dust", "drop_chance": 0.2 },
+          { "item_id": "kobold_skull_cap", "drop_chance": 0.06 }
+        ],
+        "experience": 70,
+        "gold": { "min": 3, "max": 6 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "goldtooth",
+        "name": "Goldtooth",
+        "description": "A fat kobold with a gleaming gold tooth. He guards the mine's deepest treasures.",
+        "level": 5,
+        "type": "rare",
+        "health": 140,
+        "damage": { "min": 10, "max": 16 },
+        "armor": 5,
+        "abilities": [
+          {
+            "id": "gold_rush",
+            "name": "Gold Rush",
+            "effect": { "type": "buff", "stat": "damage_bonus", "value": 0.25, "duration": 4 },
+            "cooldown": 6,
+            "trigger_chance": 0.4
+          },
+          {
+            "id": "call_guards",
+            "name": "Call Guards",
+            "summon": "kobold_tunneler",
+            "cooldown": 8,
+            "trigger_chance": 0.2
+          }
+        ],
+        "loot_table": [
+          { "item_id": "gold_dust", "drop_chance": 1.0 },
+          { "item_id": "silver_ring", "drop_chance": 0.25 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.5 }
+        ],
+        "experience": 150,
+        "gold": { "min": 10, "max": 20 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "forest_spider",
+        "name": "Forest Spider",
+        "description": "A large spider lurking in the shadows. Its mandibles drip with venom.",
+        "level": 2,
+        "health": 40,
+        "damage": { "min": 4, "max": 7 },
+        "armor": 1,
+        "abilities": [
+          {
+            "id": "venomous_bite",
+            "name": "Venomous Bite",
+            "damage_multiplier": 1.0,
+            "effect": { "type": "debuff", "stat": "poison", "value": 3, "duration": 3 },
+            "cooldown": 4,
+            "trigger_chance": 0.35
+          }
+        ],
+        "loot_table": [
+          { "item_id": "spider_ichor", "drop_chance": 0.45 },
+          { "item_id": "linen_cloth", "drop_chance": 0.15 }
+        ],
+        "experience": 40,
+        "gold": { "min": 0, "max": 2 },
+        "aggro_radius": "neutral"
+      },
+      {
+        "id": "giant_spider",
+        "name": "Giant Spider",
+        "description": "A massive spider with legs as thick as branches.",
+        "level": 4,
+        "health": 75,
+        "damage": { "min": 7, "max": 12 },
+        "armor": 3,
+        "abilities": [
+          {
+            "id": "venomous_bite",
+            "name": "Venomous Bite",
+            "damage_multiplier": 1.2,
+            "effect": { "type": "debuff", "stat": "poison", "value": 5, "duration": 4 },
+            "cooldown": 3,
+            "trigger_chance": 0.4
+          },
+          {
+            "id": "web",
+            "name": "Web",
+            "effect": { "type": "debuff", "stat": "attack_speed", "value": -0.25, "duration": 2 },
+            "cooldown": 5,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "spider_ichor", "drop_chance": 0.6 },
+          { "item_id": "antidote", "drop_chance": 0.1 }
+        ],
+        "experience": 70,
+        "gold": { "min": 2, "max": 4 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "mother_fang",
+        "name": "Mother Fang",
+        "description": "An enormous spider queen who has made her lair in a hollow tree.",
+        "level": 6,
+        "type": "rare",
+        "health": 180,
+        "damage": { "min": 12, "max": 18 },
+        "armor": 5,
+        "abilities": [
+          {
+            "id": "deadly_venom",
+            "name": "Deadly Venom",
+            "damage_multiplier": 1.3,
+            "effect": { "type": "debuff", "stat": "poison", "value": 8, "duration": 5 },
+            "cooldown": 3,
+            "trigger_chance": 0.5
+          },
+          {
+            "id": "spawn_spiderlings",
+            "name": "Spawn Spiderlings",
+            "summon": "forest_spider",
+            "cooldown": 6,
+            "trigger_chance": 0.25
+          },
+          {
+            "id": "cocoon",
+            "name": "Cocoon",
+            "effect": { "type": "debuff", "stat": "stun", "value": 1, "duration": 1 },
+            "cooldown": 8,
+            "trigger_chance": 0.2
+          }
+        ],
+        "loot_table": [
+          { "item_id": "spider_ichor", "drop_chance": 1.0 },
+          { "item_id": "antidote", "drop_chance": 0.4 },
+          { "item_id": "minor_healing_charm", "drop_chance": 0.15 }
+        ],
+        "experience": 200,
+        "gold": { "min": 8, "max": 15 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "defias_thug",
+        "name": "Defias Thug",
+        "description": "A masked criminal wearing the red bandana of the Defias Brotherhood.",
+        "level": 3,
+        "health": 70,
+        "damage": { "min": 6, "max": 10 },
+        "armor": 3,
+        "abilities": [
+          {
+            "id": "cheap_shot",
+            "name": "Cheap Shot",
+            "damage_multiplier": 1.5,
+            "cooldown": 4,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "red_bandana", "drop_chance": 0.35 },
+          { "item_id": "linen_cloth", "drop_chance": 0.3 },
+          { "item_id": "defias_orders", "drop_chance": 0.1 }
+        ],
+        "experience": 55,
+        "gold": { "min": 2, "max": 5 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "defias_bandit",
+        "name": "Defias Bandit",
+        "description": "A skilled criminal armed with a sharp blade.",
+        "level": 4,
+        "health": 90,
+        "damage": { "min": 8, "max": 13 },
+        "armor": 5,
+        "abilities": [
+          {
+            "id": "backstab",
+            "name": "Backstab",
+            "damage_multiplier": 1.8,
+            "cooldown": 4,
+            "trigger_chance": 0.3
+          },
+          {
+            "id": "throw_sand",
+            "name": "Throw Sand",
+            "effect": { "type": "debuff", "stat": "hit_chance", "value": -0.2, "duration": 2 },
+            "cooldown": 5,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "red_bandana", "drop_chance": 0.4 },
+          { "item_id": "defias_cutlass", "drop_chance": 0.05 },
+          { "item_id": "sharp_dagger", "drop_chance": 0.08 }
+        ],
+        "experience": 70,
+        "gold": { "min": 3, "max": 6 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "defias_cutpurse",
+        "name": "Defias Cutpurse",
+        "description": "A sneaky pickpocket who prefers robbery to combat.",
+        "level": 3,
+        "health": 55,
+        "damage": { "min": 7, "max": 11 },
+        "armor": 2,
+        "abilities": [
+          {
+            "id": "pilfer",
+            "name": "Pilfer",
+            "steal_gold": { "min": 1, "max": 5 },
+            "cooldown": 6,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "red_bandana", "drop_chance": 0.3 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.4 }
+        ],
+        "experience": 50,
+        "gold": { "min": 4, "max": 8 },
+        "aggro_radius": "neutral",
+        "flee_threshold": 0.25
+      },
+      {
+        "id": "gnoll_scout",
+        "name": "Riverpaw Scout",
+        "description": "A hyena-like humanoid prowling the edges of the forest.",
+        "level": 4,
+        "health": 80,
+        "damage": { "min": 7, "max": 12 },
+        "armor": 4,
+        "abilities": [
+          {
+            "id": "howl",
+            "name": "Howl",
+            "effect": { "type": "buff", "stat": "damage_bonus", "value": 0.15, "duration": 3 },
+            "cooldown": 5,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "gnoll_mane", "drop_chance": 0.45 },
+          { "item_id": "linen_cloth", "drop_chance": 0.25 }
+        ],
+        "experience": 65,
+        "gold": { "min": 2, "max": 4 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "gnoll_brute",
+        "name": "Riverpaw Brute",
+        "description": "A large, muscular gnoll wielding a crude club.",
+        "level": 5,
+        "health": 120,
+        "damage": { "min": 10, "max": 16 },
+        "armor": 6,
+        "abilities": [
+          {
+            "id": "crushing_blow",
+            "name": "Crushing Blow",
+            "damage_multiplier": 1.7,
+            "cooldown": 4,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "intimidating_roar",
+            "name": "Intimidating Roar",
+            "effect": { "type": "debuff", "stat": "damage_bonus", "value": -0.15, "duration": 3 },
+            "cooldown": 6,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "gnoll_mane", "drop_chance": 0.55 },
+          { "item_id": "gnoll_hide_cloak", "drop_chance": 0.06 }
+        ],
+        "experience": 90,
+        "gold": { "min": 3, "max": 6 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "gnoll_mystic",
+        "name": "Riverpaw Mystic",
+        "description": "A gnoll shaman adorned with bones and feathers.",
+        "level": 5,
+        "health": 85,
+        "damage": { "min": 9, "max": 14 },
+        "armor": 3,
+        "abilities": [
+          {
+            "id": "shadow_bolt",
+            "name": "Shadow Bolt",
+            "damage_multiplier": 1.5,
+            "cooldown": 2,
+            "trigger_chance": 0.45
+          },
+          {
+            "id": "dark_mending",
+            "name": "Dark Mending",
+            "heal": 25,
+            "cooldown": 5,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "gnoll_mane", "drop_chance": 0.5 },
+          { "item_id": "minor_mana_potion", "drop_chance": 0.2 },
+          { "item_id": "spellbinder_rod", "drop_chance": 0.04 }
+        ],
+        "experience": 85,
+        "gold": { "min": 3, "max": 5 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "murloc_forager",
+        "name": "Murloc Forager",
+        "description": "A small fish-like creature waddling along the riverbank.",
+        "level": 3,
+        "health": 50,
+        "damage": { "min": 5, "max": 9 },
+        "armor": 2,
+        "abilities": [
+          {
+            "id": "mrglglgl",
+            "name": "MRGLGLGL!",
+            "summon": "murloc_forager",
+            "cooldown": 10,
+            "trigger_chance": 0.15
+          }
+        ],
+        "loot_table": [
+          { "item_id": "linen_cloth", "drop_chance": 0.3 },
+          { "item_id": "minor_healing_potion", "drop_chance": 0.1 }
+        ],
+        "experience": 45,
+        "gold": { "min": 1, "max": 3 },
+        "aggro_radius": "neutral"
+      },
+      {
+        "id": "murloc_warrior",
+        "name": "Murloc Warrior",
+        "description": "A murloc armed with a crude spear made from driftwood and bone.",
+        "level": 4,
+        "health": 70,
+        "damage": { "min": 7, "max": 12 },
+        "armor": 4,
+        "abilities": [
+          {
+            "id": "jab",
+            "name": "Jab",
+            "damage_multiplier": 1.4,
+            "cooldown": 3,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "mrglglgl",
+            "name": "MRGLGLGL!",
+            "summon": "murloc_forager",
+            "cooldown": 10,
+            "trigger_chance": 0.2
+          }
+        ],
+        "loot_table": [{ "item_id": "linen_cloth", "drop_chance": 0.35 }],
+        "experience": 60,
+        "gold": { "min": 2, "max": 4 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "murloc_oracle",
+        "name": "Murloc Oracle",
+        "description": "A murloc shaman bedecked in seashells and coral.",
+        "level": 5,
+        "health": 65,
+        "damage": { "min": 8, "max": 13 },
+        "armor": 2,
+        "abilities": [
+          {
+            "id": "water_bolt",
+            "name": "Water Bolt",
+            "damage_multiplier": 1.5,
+            "cooldown": 2,
+            "trigger_chance": 0.5
+          },
+          {
+            "id": "healing_wave",
+            "name": "Healing Wave",
+            "heal": 30,
+            "cooldown": 5,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "linen_cloth", "drop_chance": 0.4 },
+          { "item_id": "minor_mana_potion", "drop_chance": 0.15 }
+        ],
+        "experience": 75,
+        "gold": { "min": 2, "max": 5 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "hogger",
+        "name": "Hogger",
+        "description": "The infamous gnoll warlord who has terrorized Elwynn Forest for years. Massive, scarred, and utterly ruthless.",
+        "level": 7,
+        "type": "boss",
+        "health": 350,
+        "damage": { "min": 14, "max": 22 },
+        "armor": 10,
+        "abilities": [
+          {
+            "id": "headbutt",
+            "name": "Headbutt",
+            "damage_multiplier": 1.3,
+            "effect": { "type": "debuff", "stat": "stun", "value": 1, "duration": 1 },
+            "cooldown": 5,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "frenzy",
+            "name": "Frenzy",
+            "effect": { "type": "buff", "stat": "damage_bonus", "value": 0.3, "duration": 4 },
+            "cooldown": 8,
+            "trigger_chance": 0.4,
+            "trigger_health_below": 0.5
+          },
+          {
+            "id": "vicious_slice",
+            "name": "Vicious Slice",
+            "damage_multiplier": 1.4,
+            "effect": { "type": "debuff", "stat": "bleed", "value": 6, "duration": 4 },
+            "cooldown": 4,
+            "trigger_chance": 0.4
+          },
+          {
+            "id": "call_packmates",
+            "name": "Call Packmates",
+            "summon": "gnoll_scout",
+            "cooldown": 10,
+            "trigger_chance": 0.3,
+            "trigger_health_below": 0.6
+          }
+        ],
+        "loot_table": [
+          { "item_id": "hoggers_claw", "drop_chance": 1.0 },
+          { "item_id": "gnoll_mane", "drop_chance": 1.0 },
+          { "item_id": "hoggers_sharpened_claw", "drop_chance": 0.35 },
+          { "item_id": "hoggers_war_harness", "drop_chance": 0.25 },
+          { "item_id": "gnoll_commanders_medallion", "drop_chance": 0.3 },
+          { "item_id": "healing_potion", "drop_chance": 0.5 }
+        ],
+        "experience": 500,
+        "gold": { "min": 20, "max": 35 },
+        "aggro_radius": "aggressive"
+      }
+    ],
+    "westfall": [
+      {
+        "id": "coyote",
+        "name": "Coyote",
+        "description": "A lean scavenger prowling the windy plains of Westfall.",
+        "level": 10,
+        "health": 120,
+        "damage": { "min": 9, "max": 14 },
+        "armor": 3,
+        "abilities": [
+          {
+            "id": "rake",
+            "name": "Rake",
+            "damage_multiplier": 1.2,
+            "effect": { "type": "debuff", "stat": "bleed", "value": 4, "duration": 3 },
+            "cooldown": 4,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "wolf_fang", "drop_chance": 0.5 },
+          { "item_id": "boar_tusk", "drop_chance": 0.2 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.25 }
+        ],
+        "experience": 110,
+        "gold": { "min": 3, "max": 7 },
+        "aggro_radius": "neutral",
+        "flee_threshold": 0.15
+      },
+      {
+        "id": "greater_coyote",
+        "name": "Greater Coyote",
+        "description": "A hardened scavenger with scarred hide and a mean streak.",
+        "level": 12,
+        "health": 150,
+        "damage": { "min": 12, "max": 18 },
+        "armor": 4,
+        "abilities": [
+          {
+            "id": "maul",
+            "name": "Maul",
+            "damage_multiplier": 1.35,
+            "cooldown": 4,
+            "trigger_chance": 0.3
+          },
+          {
+            "id": "howl",
+            "name": "Howl",
+            "effect": { "type": "buff", "stat": "damage_bonus", "value": 0.15, "duration": 3 },
+            "cooldown": 6,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "wolf_fang", "drop_chance": 0.6 },
+          { "item_id": "boar_tusk", "drop_chance": 0.25 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.3 }
+        ],
+        "experience": 140,
+        "gold": { "min": 4, "max": 9 },
+        "aggro_radius": "aggressive",
+        "flee_threshold": 0.1
+      },
+      {
+        "id": "boar",
+        "name": "Westfall Boar",
+        "description": "A thick-skinned boar rooting through the abandoned fields.",
+        "level": 9,
+        "health": 110,
+        "damage": { "min": 8, "max": 13 },
+        "armor": 3,
+        "abilities": [
+          {
+            "id": "gore",
+            "name": "Gore",
+            "damage_multiplier": 1.3,
+            "effect": { "type": "debuff", "stat": "stun", "value": 1, "duration": 1 },
+            "cooldown": 5,
+            "trigger_chance": 0.2
+          },
+          {
+            "id": "charge",
+            "name": "Charge",
+            "damage_multiplier": 1.25,
+            "cooldown": 6,
+            "trigger_chance": 0.2
+          }
+        ],
+        "loot_table": [
+          { "item_id": "boar_tusk", "drop_chance": 0.6 },
+          { "item_id": "roasted_boar_meat", "drop_chance": 0.4 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.2 }
+        ],
+        "experience": 95,
+        "gold": { "min": 2, "max": 6 },
+        "aggro_radius": "neutral"
+      },
+      {
+        "id": "flesh_ripper",
+        "name": "Flesh Ripper",
+        "description": "A vicious carrion bird that dives at anything moving.",
+        "level": 13,
+        "health": 140,
+        "damage": { "min": 11, "max": 17 },
+        "armor": 2,
+        "abilities": [
+          {
+            "id": "talon_rend",
+            "name": "Talon Rend",
+            "damage_multiplier": 1.25,
+            "effect": { "type": "debuff", "stat": "bleed", "value": 6, "duration": 3 },
+            "cooldown": 4,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "wing_buffet",
+            "name": "Wing Buffet",
+            "effect": { "type": "debuff", "stat": "hit_chance", "value": -0.15, "duration": 2 },
+            "cooldown": 6,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "linen_cloth", "drop_chance": 0.35 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.3 },
+          { "item_id": "sharp_dagger", "drop_chance": 0.05 }
+        ],
+        "experience": 150,
+        "gold": { "min": 3, "max": 8 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "harvest_watcher",
+        "name": "Harvest Watcher",
+        "description": "An automated harvest golem gone rogue, its blades still razor sharp.",
+        "level": 12,
+        "health": 180,
+        "damage": { "min": 12, "max": 20 },
+        "armor": 8,
+        "abilities": [
+          {
+            "id": "whirling_blades",
+            "name": "Whirling Blades",
+            "damage_multiplier": 1.3,
+            "effect": { "type": "debuff", "stat": "bleed", "value": 8, "duration": 3 },
+            "cooldown": 4,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "overheat",
+            "name": "Overheat",
+            "effect": { "type": "buff", "stat": "damage_bonus", "value": 0.2, "duration": 3 },
+            "cooldown": 6,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "copper_ore", "drop_chance": 0.4 },
+          { "item_id": "defias_orders", "drop_chance": 0.05 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.3 }
+        ],
+        "experience": 160,
+        "gold": { "min": 4, "max": 9 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "harvest_sentry",
+        "name": "Harvest Sentry",
+        "description": "A heavier, reinforced harvest golem. Its treads carve deep furrows in the barren soil.",
+        "level": 14,
+        "health": 220,
+        "damage": { "min": 14, "max": 22 },
+        "armor": 10,
+        "abilities": [
+          {
+            "id": "steam_vent",
+            "name": "Steam Vent",
+            "effect": { "type": "debuff", "stat": "stun", "value": 1, "duration": 1 },
+            "cooldown": 6,
+            "trigger_chance": 0.25
+          },
+          {
+            "id": "reinforced_plating",
+            "name": "Reinforced Plating",
+            "effect": { "type": "buff", "stat": "armor", "value": 5, "duration": 3 },
+            "cooldown": 7,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "copper_ore", "drop_chance": 0.45 },
+          { "item_id": "defias_orders", "drop_chance": 0.08 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.35 }
+        ],
+        "experience": 200,
+        "gold": { "min": 5, "max": 11 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "defias_trapper",
+        "name": "Defias Trapper",
+        "description": "A Defias operative laying traps and ambushes along Westfall's back roads.",
+        "level": 13,
+        "health": 150,
+        "damage": { "min": 10, "max": 16 },
+        "armor": 5,
+        "abilities": [
+          {
+            "id": "throw_net",
+            "name": "Throw Net",
+            "effect": { "type": "debuff", "stat": "stun", "value": 1, "duration": 1 },
+            "cooldown": 5,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "backstab",
+            "name": "Backstab",
+            "damage_multiplier": 1.6,
+            "cooldown": 4,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "red_bandana", "drop_chance": 0.5 },
+          { "item_id": "defias_cutlass", "drop_chance": 0.08 },
+          { "item_id": "defias_orders", "drop_chance": 0.15 },
+          { "item_id": "linen_cloth", "drop_chance": 0.3 }
+        ],
+        "experience": 170,
+        "gold": { "min": 5, "max": 11 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "defias_highwayman",
+        "name": "Defias Highwayman",
+        "description": "A hardened Defias brigand preying on travelers along Westfall's roads.",
+        "level": 15,
+        "health": 200,
+        "damage": { "min": 14, "max": 22 },
+        "armor": 7,
+        "abilities": [
+          {
+            "id": "ambush",
+            "name": "Ambush",
+            "damage_multiplier": 1.8,
+            "cooldown": 4,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "smoke_bomb",
+            "name": "Smoke Bomb",
+            "effect": { "type": "debuff", "stat": "hit_chance", "value": -0.25, "duration": 2 },
+            "cooldown": 6,
+            "trigger_chance": 0.3
+          }
+        ],
+        "loot_table": [
+          { "item_id": "red_bandana", "drop_chance": 0.5 },
+          { "item_id": "defias_cutlass", "drop_chance": 0.1 },
+          { "item_id": "defias_signet", "drop_chance": 0.15 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.35 }
+        ],
+        "experience": 230,
+        "gold": { "min": 7, "max": 14 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "defias_lookout",
+        "name": "Defias Lookout",
+        "description": "A sentry keeping watch for intruders near Defias hideouts.",
+        "level": 12,
+        "health": 120,
+        "damage": { "min": 9, "max": 14 },
+        "armor": 3,
+        "abilities": [
+          {
+            "id": "alarm",
+            "name": "Raise Alarm",
+            "summon": "defias_bandit",
+            "cooldown": 8,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "cheap_shot",
+            "name": "Cheap Shot",
+            "damage_multiplier": 1.4,
+            "cooldown": 5,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "red_bandana", "drop_chance": 0.25 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.3 },
+          { "item_id": "linen_cloth", "drop_chance": 0.2 }
+        ],
+        "experience": 130,
+        "gold": { "min": 4, "max": 8 },
+        "aggro_radius": "neutral",
+        "flee_threshold": 0.3
+      },
+      {
+        "id": "defias_sapper",
+        "name": "Defias Sapper",
+        "description": "An explosives expert with a satchel full of unstable surprises.",
+        "level": 14,
+        "health": 160,
+        "damage": { "min": 12, "max": 18 },
+        "armor": 4,
+        "abilities": [
+          {
+            "id": "bomb_toss",
+            "name": "Bomb Toss",
+            "damage_multiplier": 1.5,
+            "effect": { "type": "debuff", "stat": "stun", "value": 1, "duration": 1 },
+            "cooldown": 5,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "blast_wave",
+            "name": "Blast Wave",
+            "effect": {
+              "type": "debuff",
+              "stat": "damage_reduction",
+              "value": -0.2,
+              "duration": 2
+            },
+            "cooldown": 7,
+            "trigger_chance": 0.25
+          }
+        ],
+        "loot_table": [
+          { "item_id": "defias_orders", "drop_chance": 0.1 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 0.5 },
+          { "item_id": "minor_healing_potion", "drop_chance": 0.2 }
+        ],
+        "experience": 200,
+        "gold": { "min": 6, "max": 12 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "defias_overseer",
+        "name": "Defias Overseer",
+        "description": "A ruthless foreman driving Defias labor in Jangolode Mine.",
+        "level": 16,
+        "type": "boss",
+        "health": 320,
+        "damage": { "min": 15, "max": 24 },
+        "armor": 9,
+        "abilities": [
+          {
+            "id": "crushing_blow",
+            "name": "Crushing Blow",
+            "damage_multiplier": 1.6,
+            "cooldown": 4,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "battle_shout",
+            "name": "Battle Shout",
+            "effect": { "type": "buff", "stat": "damage_bonus", "value": 0.25, "duration": 4 },
+            "cooldown": 7,
+            "trigger_chance": 0.3
+          },
+          {
+            "id": "call_for_backup",
+            "name": "Call for Backup",
+            "summon": "defias_trapper",
+            "cooldown": 8,
+            "trigger_chance": 0.25,
+            "trigger_health_below": 0.6
+          }
+        ],
+        "loot_table": [
+          { "item_id": "defias_cutlass", "drop_chance": 0.3 },
+          { "item_id": "defias_leather_vest", "drop_chance": 0.25 },
+          { "item_id": "defias_signet", "drop_chance": 1.0 },
+          { "item_id": "small_pouch_of_coins", "drop_chance": 1.0 },
+          { "item_id": "healing_potion", "drop_chance": 0.5 }
+        ],
+        "experience": 450,
+        "gold": { "min": 15, "max": 25 },
+        "aggro_radius": "aggressive"
+      },
+      {
+        "id": "edwin_vancleef",
+        "name": "Edwin VanCleef",
+        "description": "Leader of the Defias Brotherhood and architect of Westfall's rebellion.",
+        "level": 20,
+        "type": "boss",
+        "health": 500,
+        "damage": { "min": 20, "max": 32 },
+        "armor": 12,
+        "abilities": [
+          {
+            "id": "sinister_strike",
+            "name": "Sinister Strike",
+            "damage_multiplier": 1.5,
+            "cooldown": 3,
+            "trigger_chance": 0.4
+          },
+          {
+            "id": "blade_flurry",
+            "name": "Blade Flurry",
+            "effect": { "type": "buff", "stat": "extra_attack", "value": 1, "duration": 2 },
+            "cooldown": 6,
+            "trigger_chance": 0.35
+          },
+          {
+            "id": "smoke_cloud",
+            "name": "Smoke Cloud",
+            "effect": { "type": "debuff", "stat": "hit_chance", "value": -0.3, "duration": 3 },
+            "cooldown": 7,
+            "trigger_chance": 0.3
+          },
+          {
+            "id": "call_the_brotherhood",
+            "name": "Call the Brotherhood",
+            "summon": "defias_highwayman",
+            "cooldown": 8,
+            "trigger_chance": 0.25,
+            "trigger_health_below": 0.7
+          }
+        ],
+        "loot_table": [
+          { "item_id": "defias_cutlass", "drop_chance": 0.4 },
+          { "item_id": "defias_leather_vest", "drop_chance": 0.35 },
+          { "item_id": "defias_signet", "drop_chance": 1.0 },
+          { "item_id": "defias_orders", "drop_chance": 1.0 },
+          { "item_id": "forest_tracker_bow", "drop_chance": 0.2 },
+          { "item_id": "gnarled_oak_staff", "drop_chance": 0.2 },
+          { "item_id": "healing_potion", "drop_chance": 0.6 }
+        ],
+        "experience": 1200,
+        "gold": { "min": 40, "max": 70 },
+        "aggro_radius": "aggressive"
+      }
+    ]
+  }
+}
